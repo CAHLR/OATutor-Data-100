@@ -10,6 +10,7 @@
                 "name": "Lesson worksheet",
                 "topics": "",
                 "allowRecycle": true,
+                "enableCompletionMode": true,
                 "learningObjectives": {
                     "bias": 0.85,
                     "bootstrapping": 0.85,
