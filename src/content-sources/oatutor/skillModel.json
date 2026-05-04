@@ -1,0 +1,360 @@
+{
+    "af40364Q1aa": [
+        "sampling"
+    ],
+    "af40364Q1ab": [
+        "sampling"
+    ],
+    "af40364Q1ac": [
+        "sampling"
+    ],
+    "af40364Q1ad": [
+        "sampling"
+    ],
+    "af40364Q1ae": [
+        "sampling"
+    ],
+    "af40364Q1af": [
+        "sampling"
+    ],
+    "af40364Q1ag": [
+        "sampling"
+    ],
+    "af40364Q1ba": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bb": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bc": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bd": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1be": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bf": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bg": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bh": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bi": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bj": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bk": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bl": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bm": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bn": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bo": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bp": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bq": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1br": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bs": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bt": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bu": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bv": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bw": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1bx": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1by": [
+        "visualization",
+        "regex",
+        "data_types"
+    ],
+    "af40364Q1ca": [
+        "pandas"
+    ],
+    "af40364Q1cb": [
+        "pandas"
+    ],
+    "af40364Q1cc": [
+        "pandas"
+    ],
+    "af40364Q1cd": [
+        "pandas"
+    ],
+    "af40364Q1ce": [
+        "pandas"
+    ],
+    "af40364Q1da": [
+        "sql"
+    ],
+    "af40364Q1db": [
+        "sql"
+    ],
+    "af40364Q1dc": [
+        "sql"
+    ],
+    "af40364Q1dd": [
+        "sql"
+    ],
+    "af40364Q1ea": [
+        "sql"
+    ],
+    "af40364Q1eb": [
+        "sql"
+    ],
+    "af40364Q1ec": [
+        "sql"
+    ],
+    "af40364Q1ed": [
+        "sql"
+    ],
+    "af40364Q1ee": [
+        "sql"
+    ],
+    "af40364Q1ef": [
+        "sql"
+    ],
+    "af40364Q2aa": [
+        "bias",
+        "variance"
+    ],
+    "af40364Q2ab": [
+        "bias",
+        "variance"
+    ],
+    "af40364Q2ba": [
+        "bootstrapping"
+    ],
+    "af40364Q2bb": [
+        "bootstrapping"
+    ],
+    "af40364Q2bc": [
+        "bootstrapping"
+    ],
+    "af40364Q2bd": [
+        "bootstrapping"
+    ],
+    "af40364Q2be": [
+        "bootstrapping"
+    ],
+    "af40364Q2bf": [
+        "bootstrapping"
+    ],
+    "af40364Q4aa": [
+        "ols"
+    ],
+    "af40364Q4ab": [
+        "ols"
+    ],
+    "af40364Q4ac": [
+        "ols"
+    ],
+    "af40364Q4ad": [
+        "ols"
+    ],
+    "af40364Q4ba": [
+        "ols"
+    ],
+    "af40364Q4bb": [
+        "ols"
+    ],
+    "af40364Q4bc": [
+        "ols"
+    ],
+    "af40364Q4bd": [
+        "ols"
+    ],
+    "af40364Q5aa": [
+        "logistic_regression"
+    ],
+    "af40364Q5ab": [
+        "logistic_regression"
+    ],
+    "af40364Q5ba": [
+        "logistic_regression"
+    ],
+    "af40364Q5ca": [
+        "logistic_regression"
+    ],
+    "af40364Q5cb": [
+        "logistic_regression"
+    ],
+    "af40364Q5da": [
+        "logistic_regression"
+    ],
+    "af40364Q6a": [
+        "pca"
+    ],
+    "af40364Q6b": [
+        "pca"
+    ],
+    "af40364Q6c": [
+        "pca"
+    ],
+    "af40364Q7aa": [
+        "clustering"
+    ],
+    "af40364Q7ab": [
+        "clustering"
+    ],
+    "af40364Q7ac": [
+        "clustering"
+    ],
+    "af40364Q7ba": [
+        "clustering"
+    ],
+    "af40364Q7bb": [
+        "clustering"
+    ],
+    "af40364Q7bc": [
+        "clustering"
+    ],
+    "af40364Q7bd": [
+        "clustering"
+    ],
+    "af40364q3aa": [
+        "regression"
+    ],
+    "af40364q3ab": [
+        "regression"
+    ],
+    "af40364q3ac": [
+        "regression"
+    ],
+    "af40364q3ad": [
+        "regression"
+    ],
+    "af40364q3ae": [
+        "regression"
+    ],
+    "af40364q3af": [
+        "regression"
+    ],
+    "af40364q3ba": [
+        "loss"
+    ],
+    "af40364q3ca": [
+        "ols"
+    ],
+    "af40364q3cb": [
+        "ols"
+    ],
+    "af40364q3cc": [
+        "ols"
+    ],
+    "af40364q3cd": [
+        "ols"
+    ],
+    "af40364q3ce": [
+        "ols"
+    ],
+    "af40364q3cf": [
+        "ols"
+    ],
+    "af40364q3cg": [
+        "ols"
+    ],
+    "af40364q3ch": [
+        "ols"
+    ],
+    "af40364q3ci": [
+        "ols"
+    ],
+    "af40364q3da": [
+        "regularization"
+    ],
+    "af40364q3db": [
+        "regularization"
+    ],
+    "af40364q3dc": [
+        "regularization"
+    ],
+    "af40364q3dd": [
+        "regularization"
+    ],
+    "af40364q3ea": [
+        "cross_validation"
+    ],
+    "af40364q3fa": [
+        "loss"
+    ],
+    "af40364q3fb": [
+        "loss"
+    ]
+}
