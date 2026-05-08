@@ -11,6 +11,8 @@
                 "topics": "",
                 "allowRecycle": true,
                 "enableCompletionMode": true,
+                "showStuMastery": false,
+                "doMasteryUpdate": false,
                 "learningObjectives": {
                     "bias": 0.85,
                     "bootstrapping": 0.85,
