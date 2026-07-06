@@ -31,5 +31,49 @@
                 }
             }
         ]
+    },
+    {
+        "courseName": "Data 100 Worksheets",
+        "language": "en",
+        "courseOER": "https://ds100.org/sp26/assets/exams/fa25/fa25_final_sol.pdf",
+        "courseLicense": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+        "lessons": [
+            {
+                "id": "5et27kh3-kASP-bBVie8mymw",
+                "name": "Lesson Pandas",
+                "topics": "",
+                "allowRecycle": true,
+                "learningObjectives": {
+                    "pandas": 0.85
+                }
+            },
+            {
+                "id": "0J4oH3sc-lfJh-d1qRqOwnTg",
+                "name": "Lesson EDA,",
+                "topics": "Data Cleaning & Visualization",
+                "allowRecycle": true,
+                "learningObjectives": {
+                    "eda": 0.85
+                }
+            },
+            {
+                "id": "46kTNuXX-rGEg-0UV75xqETK",
+                "name": "Lesson Regex",
+                "topics": "",
+                "allowRecycle": true,
+                "learningObjectives": {
+                    "regex": 0.85
+                }
+            },
+            {
+                "id": "484fDTrc-PtK4-Qeu3HhqFcH",
+                "name": "Lesson Sampling",
+                "topics": "",
+                "allowRecycle": true,
+                "learningObjectives": {
+                    "sampling": 0.85
+                }
+            }
+        ]
     }
 ]
