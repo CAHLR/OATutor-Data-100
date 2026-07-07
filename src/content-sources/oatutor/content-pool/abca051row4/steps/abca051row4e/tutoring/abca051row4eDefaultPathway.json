@@ -25,20 +25,20 @@
         "problemType": "MultipleChoice",
         "answerType": "string",
         "hintAnswer": [
-            "merge(expected_prices, $$on=\"chain\")$$"
+            "merge(expected\\_prices, $$on=\"chain\")$$"
         ],
         "dependencies": [],
         "title": "Choosing the Correct Merge Function",
-        "text": "What function would you use to merge the $$avg_{weights}$$ DataFrame with the $$expected_{prices}$$ DataFrame based on the 'chain' column?",
+        "text": "What function would you use to merge the avg\\_weights DataFrame with the expected\\_prices DataFrame based on the 'chain' column?",
         "variabilization": {},
         "oer": "openai",
         "license": "",
         "choices": [
-            "merge(expected_prices, $$on=\"chain\")$$",
-            "join(expected_prices, $$on=\"chain\")$$",
-            "merge(expected_prices, $$on=\"weight\")$$",
-            "merge(expected_prices, $$left_{on}=\"chain\"$$, right_on=\"price_per_ounce\")",
-            "concat(expected_prices, $$on=\"chain\")$$"
+            "merge(expected\\_prices, $$on=\"chain\")$$",
+            "join(expected\\_prices, $$on=\"chain\")$$",
+            "merge(expected\\_prices, $$on=\"weight\")$$",
+            "merge(expected\\_prices, left\\_on=\"chain\", right\\_on=\"price\\_per\\_ounce\")",
+            "concat(expected\\_prices, $$on=\"chain\")$$"
         ]
     },
     {
@@ -56,7 +56,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Checking DataFrame Columns",
-        "text": "Verify that the 'chain' column is present in both the $$avg_{weights}$$ and $$expected_{prices}$$ DataFrames. This column will be used to merge the two DataFrames.",
+        "text": "Verify that the 'chain' column is present in both the avg\\_weights and expected\\_prices DataFrames. This column will be used to merge the two DataFrames.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -67,20 +67,20 @@
         "problemType": "MultipleChoice",
         "answerType": "string",
         "hintAnswer": [
-            "merge(expected_prices, $$on=\"chain\")$$"
+            "merge(expected\\_prices, $$on=\"chain\")$$"
         ],
         "dependencies": [],
         "title": "Executing the Merge",
-        "text": "Use the merge function to combine $$avg_{weights}$$ and $$expected_{prices}$$ on the 'chain' column. What is the correct syntax?",
+        "text": "Use the merge function to combine avg\\_weights and expected\\_prices on the 'chain' column. What is the correct syntax?",
         "variabilization": {},
         "oer": "openai",
         "license": "",
         "choices": [
-            "merge(expected_prices, $$on=\"chain\")$$",
-            "join(expected_prices, $$on=\"chain\")$$",
-            "merge(expected_prices, $$on=\"weight\")$$",
-            "merge(expected_prices, $$left_{on}=\"chain\"$$, right_on=\"price_per_ounce\")",
-            "concat(expected_prices, $$on=\"chain\")$$"
+            "merge(expected\\_prices, $$on=\"chain\")$$",
+            "join(expected\\_prices, $$on=\"chain\")$$",
+            "merge(expected\\_prices, $$on=\"weight\")$$",
+            "merge(expected\\_prices, left\\_on=\"chain\", right\\_on=\"price\\_per\\_ounce\")",
+            "concat(expected\\_prices, $$on=\"chain\")$$"
         ]
     }
 ]

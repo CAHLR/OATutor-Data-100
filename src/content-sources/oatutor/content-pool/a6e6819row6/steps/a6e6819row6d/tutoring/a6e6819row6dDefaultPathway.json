@@ -3,7 +3,7 @@
         "id": "a6e6819row6d-h1",
         "type": "hint",
         "dependencies": [],
-        "title": "Understanding $$mean_Q$$",
+        "title": "Understanding mean\\_Q",
         "text": "To calculate the mean of two numbers, you add them together and then divide by $$2$$.",
         "variabilization": {},
         "oer": "openai",
@@ -15,13 +15,13 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$skate_{record[\"mean_Q\"]}$$"
+            "skate\\_record[\"mean\\_Q\"]"
         ],
         "dependencies": [
             "a6e6819row6d-h1"
         ],
-        "title": "Calculate $$mean_Q$$",
-        "text": "Use the ratings from $$critic_1$$ and $$critic_2$$ to calculate the mean rating for each performance.",
+        "title": "Calculate mean\\_Q",
+        "text": "Use the ratings from critic\\_1 and critic\\_2 to calculate the mean rating for each performance.",
         "variabilization": {},
         "oer": "openai",
         "license": ""

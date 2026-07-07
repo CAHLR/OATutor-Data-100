@@ -5,7 +5,7 @@
     ],
     "problemType": "MultipleChoice",
     "stepTitle": "Choosing Regex Patterns for Star Ratings",
-    "stepBody": "Many critics rate films on a scale of $$0$$ to $$5$$ stars. Christopher wants to write a regex pattern that will capture star-based ratings, between $$0$$ and $$5$$, mentioned in a review. Assume that any star-based rating will take the form \u201c# star\u201d, where # is a numeric digit between $$0$$ and $$5$$. If a review contains no star-based rating, no text should be returned. The correct answer(s) should satisfy the test cases above when the regex pattern is assigned to the variable $$pattern_a$$. Select all that apply.##figure1.gif## ",
+    "stepBody": "Many critics rate films on a scale of $$0$$ to $$5$$ stars. Christopher wants to write a regex pattern that will capture star-based ratings, between $$0$$ and $$5$$, mentioned in a review. Assume that any star-based rating will take the form \u201c# star\u201d, where # is a numeric digit between $$0$$ and $$5$$. If a review contains no star-based rating, no text should be returned. The correct answer(s) should satisfy the test cases above when the regex pattern is assigned to the variable pattern\\_a. Select all that apply.##figure1.gif## ",
     "answerType": "string",
     "variabilization": {},
     "choices": [

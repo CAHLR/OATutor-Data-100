@@ -14,7 +14,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Using the Mode",
-        "text": "The mode is the most frequently occurring value in a dataset. For each activity type, you need to find the mode of the $$hour_{of,visit}$$. How can you achieve this using the groupby function?",
+        "text": "The mode is the most frequently occurring value in a dataset. For each activity type, you need to find the mode of the hour\\_of\\_visit. How can you achieve this using the groupby function?",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -42,7 +42,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$portal_{traffic}$$"
+            "portal\\_traffic"
         ],
         "dependencies": [],
         "title": "Filling Blank B",
@@ -58,7 +58,7 @@
             "a9990efrow7_p1d-h4"
         ],
         "title": "Identifying Missing Values",
-        "text": "To identify missing values, you need to check which entries in the $$hour_{of,visit}$$ column are NaN. How can you do this using pandas?",
+        "text": "To identify missing values, you need to check which entries in the hour\\_of\\_visit column are NaN. How can you do this using pandas?",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -96,7 +96,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$hour_{of,visit}$$"
+            "hour\\_of\\_visit"
         ],
         "dependencies": [
             "a9990efrow7_p1d-h7"

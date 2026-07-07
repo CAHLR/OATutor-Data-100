@@ -4,7 +4,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Use Both Test Cases",
-        "text": "A correct pattern must return ['5 star'] for $$review_1$$ and [] for $$review_2$$. Any pattern that returns part of \"100 star\" does not satisfy the second test case.",
+        "text": "A correct pattern must return ['5 star'] for review\\_1 and [] for review\\_2. Any pattern that returns part of \"100 star\" does not satisfy the second test case.",
         "variabilization": {},
         "oer": "",
         "license": ""
@@ -51,7 +51,7 @@
             "a6e6819row13a-h3"
         ],
         "title": "Why Option B Is Not Enough",
-        "text": "The pattern r\"\\D+[0-5] star\" has no capturing group, so it returns the full matched text instead of just the rating. For $$review_1$$, that includes the earlier non-numeric characters before $$5$$ star.",
+        "text": "The pattern `r\"\\D+[0-5] star\"` has no capturing group, so it returns the full matched text instead of just the rating. For review\\_1, that includes the earlier non-numeric characters before $$5$$ star.",
         "variabilization": {},
         "oer": "",
         "license": ""

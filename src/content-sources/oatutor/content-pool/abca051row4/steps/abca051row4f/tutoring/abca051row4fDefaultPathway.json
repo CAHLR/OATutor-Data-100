@@ -25,7 +25,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$merged[\"average_weight\"]$$ and $$merged[\"price_per_ounce\"]$$"
+            "$$merged[\"average\\_weight\"]$$ and $$merged[\"price\\_per\\_ounce\"]$$"
         ],
         "dependencies": [
             "abca051row4f-h1"
@@ -42,7 +42,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$merged[\"average_weight\"]*merged[\"price_per_ounce\"] merged[\"average_weight\"]*merged[\"price_per_ounce\"]$$"
+            "$$merged[\"average\\_weight\"]*merged[\"price\\_per\\_ounce\"] merged[\"average\\_weight\"]*merged[\"price\\_per\\_ounce\"]$$"
         ],
         "dependencies": [
             "abca051row4f-h3"

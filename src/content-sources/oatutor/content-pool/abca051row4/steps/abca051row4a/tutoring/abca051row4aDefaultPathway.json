@@ -63,7 +63,7 @@
             "abca051row4a-h4"
         ],
         "title": "Counting Occurrences",
-        "text": "Use the $$\\operatorname{value_{counts}}\\left(\\right)$$ function to count how many times each chain appears in the filtered DataFrame.",
+        "text": "Use the value\\_counts() function to count how many times each chain appears in the filtered DataFrame.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -74,7 +74,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "nuggets[nuggets[\"weight\"]<0.6][\"chain\"].value_counts()"
+            "nuggets[nuggets[\"weight\"]<0.6][\"chain\"].value\\_counts()"
         ],
         "dependencies": [
             "abca051row4a-h4"

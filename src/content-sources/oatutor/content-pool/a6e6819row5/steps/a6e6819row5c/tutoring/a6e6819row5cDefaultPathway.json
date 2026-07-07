@@ -39,7 +39,7 @@
         "problemType": "TextBox",
         "answerType": "string",
         "hintAnswer": [
-            "\\d{1,2}[csx]?"
+            "`\\d{1,2}[csx]?`"
         ],
         "dependencies": [
             "a6e6819row5c-h3"

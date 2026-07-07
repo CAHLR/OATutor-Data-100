@@ -56,12 +56,12 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$\\operatorname{value_{counts}}\\left(\\right)$$"
+            "value\\_counts()"
         ],
         "dependencies": [
             "abca051row4c-h4"
         ],
-        "title": "Using $$\\operatorname{value_{counts}}\\left(\\right)$$",
+        "title": "Using value\\_counts()",
         "text": "What function can you use to count the number of occurrences of each chain in the filtered DataFrame?",
         "variabilization": {},
         "oer": "openai",

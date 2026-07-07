@@ -42,7 +42,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "nuggets[nuggets[\"weight\"]<0.6][\"chain\"].value_counts().idxmax()"
+            "nuggets[nuggets[\"weight\"]<0.6][\"chain\"].value\\_counts().idxmax()"
         ],
         "dependencies": [
             "a9990efrow4a-h3"

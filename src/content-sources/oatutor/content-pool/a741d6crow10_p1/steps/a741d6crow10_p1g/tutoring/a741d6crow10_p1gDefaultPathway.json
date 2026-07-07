@@ -34,9 +34,9 @@
         "oer": "openai",
         "license": "",
         "choices": [
-            "False",
             "The sample may not represent all students, as it only includes those attending discussions.",
-            "True"
+            "There is no issue with selecting students this way.",
+            "This is an example of selection bias."
         ]
     },
     {
@@ -54,9 +54,8 @@
         "oer": "openai",
         "license": "",
         "choices": [
-            "False",
             "No, it may not be representative as it depends on the order of students attending.",
-            "True"
+            "Yes, since all students are selected randomly."
         ]
     }
 ]

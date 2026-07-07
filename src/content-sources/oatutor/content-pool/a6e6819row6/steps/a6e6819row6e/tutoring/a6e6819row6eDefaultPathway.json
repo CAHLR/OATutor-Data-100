@@ -16,7 +16,7 @@
             "a6e6819row6e-h1"
         ],
         "title": "Identifying Patterns",
-        "text": "For the $$'number_{of,W'}$$ column, you need to count words where 'W' is surrounded by uppercase letters. Think about how you can identify such patterns without using the 're' library.",
+        "text": "For the 'number\\_of\\_W' column, you need to count words where 'W' is surrounded by uppercase letters. Think about how you can identify such patterns without using the 're' library.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -28,7 +28,7 @@
             "a6e6819row6e-h1"
         ],
         "title": "Calculating the Mean",
-        "text": "To calculate the mean of two numbers, you add them together and divide by $$2$$. This will help you fill in the blank for $$'mean_{Q'}$$.",
+        "text": "To calculate the mean of two numbers, you add them together and divide by $$2$$. This will help you fill in the blank for 'mean\\_Q'.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -39,7 +39,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "skate_record['comment'].apply"
+            "skate\\_record['comment'].apply"
         ],
         "dependencies": [],
         "title": "Filling in Blank (i)",
@@ -88,7 +88,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$skate_{record[primesymbolmean_Qprimesymbol]}$$"
+            "skate\\_record['mean\\_Q']"
         ],
         "dependencies": [],
         "title": "Filling in Blank (iv)",
@@ -103,7 +103,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$skate_{record[primesymbolcritic_1primesymbol]+skate_record[primesymbolcritic_2primesymbol]}+skate_{record[primesymbolcritic_1primesymbol]+skate_record[primesymbolcritic_2primesymbol]}$$"
+            "skate\\_record['critic\\_1']+skate\\_record['critic\\_2']"
         ],
         "dependencies": [
             "a6e6819row6e-h7"

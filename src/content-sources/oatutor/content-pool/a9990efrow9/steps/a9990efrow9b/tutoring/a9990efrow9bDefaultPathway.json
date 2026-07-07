@@ -55,7 +55,7 @@
             "a9990efrow9b-h2"
         ],
         "title": "Connecting Columns to Granularity",
-        "text": "Consider how the columns like $$'post_{id'}$$, 'date', and 'likes' relate to the granularity of the data.",
+        "text": "Consider how the columns like 'post\\_id', 'date', and 'likes' relate to the granularity of the data.",
         "variabilization": {},
         "oer": "openai",
         "license": "",

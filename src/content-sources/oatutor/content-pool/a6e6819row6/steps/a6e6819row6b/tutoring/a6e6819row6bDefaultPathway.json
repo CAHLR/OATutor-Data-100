@@ -54,13 +54,13 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "$$\\frac{critic_1+critic_2}{2}$$"
+            "(critic\\_1+critic\\_2)/2"
         ],
         "dependencies": [
             "a6e6819row6b-h4"
         ],
         "title": "Mean of Critics' Ratings",
-        "text": "How would you calculate the mean of $$critic_1$$ and $$critic_2$$ ratings?",
+        "text": "How would you calculate the mean of critic\\_1 and critic\\_2 ratings?",
         "variabilization": {},
         "oer": "openai",
         "license": ""

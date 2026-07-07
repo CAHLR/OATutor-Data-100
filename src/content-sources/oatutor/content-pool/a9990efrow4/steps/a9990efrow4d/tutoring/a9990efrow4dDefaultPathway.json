@@ -37,7 +37,7 @@
             ".groupby(\"chain\")",
             ".groupby(\"weight\")",
             ".groupby(\"shape\")",
-            ".sort_values(\"chain\")",
+            ".sort\\_values(\"chain\")",
             ".groupby([\"chain\"])"
         ]
     }

@@ -5,7 +5,7 @@
     ],
     "problemType": "MultipleChoice",
     "stepTitle": "Choosing Regex Patterns for Assignments",
-    "stepBody": "The professors want to analyze feedback on particular assignments (projects, labs, and homeworks) and create a RegEx pattern called $$assignment_{pattern}$$. Given the example output below, which RegEx patterns could be $$assignment_{pattern}$$? Select all that apply.##figure1.gif## ",
+    "stepBody": "The professors want to analyze feedback on particular assignments (projects, labs, and homeworks) and create a RegEx pattern called assignment\\_pattern. Given the example output below, which RegEx patterns could be assignment\\_pattern? Select all that apply.##figure1.gif## ",
     "answerType": "string",
     "variabilization": {},
     "choices": [

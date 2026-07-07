@@ -63,7 +63,7 @@
             "a6e6819row8a-h4"
         ],
         "title": "Eliminate Extra Characters",
-        "text": "Reject answer choices that include characters outside the capturing group, such as the $$3$$ in CUT3 or the space represented by $$_{}$$ in $$WORST_{}$$. Among the choices, keep only strings that exactly match captured outputs from re.findall",
+        "text": "Reject answer choices that include characters outside the capturing group, such as the $$3$$ in CUT3 or the space represented by \\_ in WORST\\_. Among the choices, keep only strings that exactly match captured outputs from re.findall",
         "variabilization": {},
         "oer": "",
         "license": ""

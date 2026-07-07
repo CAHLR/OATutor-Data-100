@@ -15,7 +15,7 @@
         "problemType": "MultipleChoice",
         "answerType": "string",
         "hintAnswer": [
-            "\\?"
+            "`\\?`"
         ],
         "dependencies": [
             "a6e6819row14c-h10"
@@ -26,10 +26,10 @@
         "oer": "",
         "license": "",
         "choices": [
-            "\\?",
-            "\\*",
-            "\\+",
-            "\\s"
+            "`\\?`",
+            "`\\*`",
+            "`\\+`",
+            "`\\s`"
         ]
     },
     {

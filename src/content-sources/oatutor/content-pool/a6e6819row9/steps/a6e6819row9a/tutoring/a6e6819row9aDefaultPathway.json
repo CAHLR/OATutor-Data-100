@@ -4,7 +4,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Find What Should Be Captured",
-        "text": "The output contains $$open_{mouth}$$ and camera, so the regex should capture the emoji name inside the two colons, not the colons themselves.",
+        "text": "The output contains open\\_mouth and camera, so the regex should capture the emoji name inside the two colons, not the colons themselves.",
         "variabilization": {},
         "oer": "",
         "license": ""
@@ -15,19 +15,19 @@
         "problemType": "MultipleChoice",
         "answerType": "string",
         "hintAnswer": [
-            "$$open_{mouth}$$"
+            "open\\_mouth"
         ],
         "dependencies": [
             "a6e6819row9a-h1"
         ],
         "title": "Captured Text from One Emoji",
-        "text": "For the emoji :open_mouth:, what should the capturing group return?",
+        "text": "For the emoji :open\\_mouth:, what should the capturing group return?",
         "variabilization": {},
         "oer": "",
         "license": "",
         "choices": [
-            "$$open_{mouth}$$",
-            ":open_mouth:",
+            "open\\_mouth",
+            ":open\\_mouth:",
             "mouth",
             "None of these"
         ]
@@ -63,7 +63,7 @@
             "a6e6819row9a-h4"
         ],
         "title": "Compare the Correct Patterns",
-        "text": "The pattern r\":([a-zA-Z_]+):\" explicitly captures one or more letters or underscores between colons. The pattern r\":(\\w+):\" also captures the full emoji names in these examples because \\w includes letters and underscores.",
+        "text": "The pattern `r\":([a-zA-Z_]+):\"` explicitly captures one or more letters or underscores between colons. The pattern `r\":(\\w+):\"` also captures the full emoji names in these examples because \\w includes letters and underscores.",
         "variabilization": {},
         "oer": "",
         "license": ""

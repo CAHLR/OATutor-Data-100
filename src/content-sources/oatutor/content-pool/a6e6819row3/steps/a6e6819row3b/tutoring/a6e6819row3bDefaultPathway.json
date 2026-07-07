@@ -39,7 +39,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "\\d+"
+            "`\\d+`"
         ],
         "dependencies": [
             "a6e6819row3b-h2"

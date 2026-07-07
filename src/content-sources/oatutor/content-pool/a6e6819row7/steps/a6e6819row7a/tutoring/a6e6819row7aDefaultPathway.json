@@ -51,7 +51,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "[**\\sA-Z]*cat[**\\sA-Z]*"
+            "`[**\\sA-Z]*cat[**\\sA-Z]*`"
         ],
         "dependencies": [
             "a6e6819row7a-h4"

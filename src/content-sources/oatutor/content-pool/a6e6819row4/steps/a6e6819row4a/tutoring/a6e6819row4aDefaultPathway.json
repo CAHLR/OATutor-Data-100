@@ -39,7 +39,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "\\d+\\s([A-Za-z\\s]+)"
+            "`\\d+\\s([A-Za-z\\s]+)`"
         ],
         "dependencies": [
             "a6e6819row4a-h3"

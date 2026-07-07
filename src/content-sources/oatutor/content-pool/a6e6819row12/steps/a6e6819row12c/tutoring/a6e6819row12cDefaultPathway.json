@@ -51,7 +51,7 @@
             "a6e6819row12c-h12"
         ],
         "title": "Eliminate Patterns with the Wrong Boundary",
-        "text": "The pattern r'(awful\\s){3}' fails because it requires a space after the third awful, but the third awful is followed by a period in $$review_2$$.",
+        "text": "The pattern `r'(awful\\s){3}'` fails because it requires a space after the third awful, but the third awful is followed by a period in review\\_2.",
         "variabilization": {},
         "oer": "",
         "license": ""

@@ -39,7 +39,7 @@
         "problemType": "TextBox",
         "answerType": "string",
         "hintAnswer": [
-            "cat_responses.str.replace(pat,\"dog\",regex=True)"
+            "cat\\_responses.str.replace(pat,\"dog\",regex=True)"
         ],
         "dependencies": [
             "a6e6819row7b-h3"

@@ -4,7 +4,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Understanding the Task",
-        "text": "You need to fill in the blanks to add two columns to the DataFrame: $$'number_{of,W'}$$ and $$'mean_{Q'}$$. Focus on how to count specific patterns in strings and calculate averages.",
+        "text": "You need to fill in the blanks to add two columns to the DataFrame: 'number\\_of\\_W' and 'mean\\_Q'. Focus on how to count specific patterns in strings and calculate averages.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -16,7 +16,7 @@
             "a6e6819row6c-h1"
         ],
         "title": "Identifying Patterns",
-        "text": "For $$'number_{of,W'}$$, you need to count words with an uppercase 'W' surrounded by uppercase letters. Think about how you can identify these patterns without using the 're' library.",
+        "text": "For 'number\\_of\\_W', you need to count words with an uppercase 'W' surrounded by uppercase letters. Think about how you can identify these patterns without using the 're' library.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -28,7 +28,7 @@
             "a6e6819row6c-h1"
         ],
         "title": "Calculating Averages",
-        "text": "For $$'mean_{Q'}$$, you need to calculate the average of two critic ratings. Consider how you can achieve this using basic arithmetic operations.",
+        "text": "For 'mean\\_Q', you need to calculate the average of two critic ratings. Consider how you can achieve this using basic arithmetic operations.",
         "variabilization": {},
         "oer": "openai",
         "license": ""

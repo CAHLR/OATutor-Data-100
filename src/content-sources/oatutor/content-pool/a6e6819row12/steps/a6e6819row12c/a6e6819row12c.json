@@ -5,7 +5,7 @@
     ],
     "problemType": "MultipleChoice",
     "stepTitle": "Capturing a Repeated Word Substring",
-    "stepBody": "A dangerous incident occurred at the park, leading to some negative reviews. Mir is tasked with a particularly negative review called $$review_2$$, which is given below: $$review_2$$ $$=$$ \"Truly awful awful awful. All the dinosaurs escaped their enclosures.\" Which pattern would correctly capture the substring \"awful awful awful\" in $$review_2$$?",
+    "stepBody": "A dangerous incident occurred at the park, leading to some negative reviews. Mir is tasked with a particularly negative review called review\\_2, which is given below: review\\_2 $$=$$ \"Truly awful awful awful. All the dinosaurs escaped their enclosures.\" Which pattern would correctly capture the substring \"awful awful awful\" in review\\_2?",
     "answerType": "string",
     "variabilization": {},
     "choices": [

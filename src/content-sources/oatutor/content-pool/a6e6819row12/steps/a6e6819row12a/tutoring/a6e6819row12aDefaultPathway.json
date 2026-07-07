@@ -21,7 +21,7 @@
             "a6e6819row12a-h1"
         ],
         "title": "First Field to Capture",
-        "text": "From $$rex_{string}$$, what should the first captured field be?",
+        "text": "From rex\\_string, what should the first captured field be?",
         "variabilization": {},
         "oer": "",
         "license": "",

@@ -16,7 +16,7 @@
             "a9990efrow7_p1a-h1"
         ],
         "title": "Choosing the Correct Column",
-        "text": "Consider which column you need to group by to calculate the mode of $$hour_{of,visit}$$ for each activity type.",
+        "text": "Consider which column you need to group by to calculate the mode of hour\\_of\\_visit for each activity type.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -33,16 +33,16 @@
             "a9990efrow7_p1a-h2"
         ],
         "title": "Fill in Blank A",
-        "text": "What column should you use to group the data to calculate the mode of $$hour_{of,visit}$$ for each activity type?",
+        "text": "What column should you use to group the data to calculate the mode of hour\\_of\\_visit for each activity type?",
         "variabilization": {},
         "oer": "openai",
         "license": "",
         "choices": [
             "(\"activity\")",
-            "(\"hour_of_visit\")",
+            "(\"hour\\_of\\_visit\")",
             "(\"activity\")",
-            "(\"hour_of_visit\")",
-            "([\"activity\", \"hour_of_visit\"])"
+            "(\"hour\\_of\\_visit\")",
+            "([\"activity\", \"hour\\_of\\_visit\"])"
         ]
     }
 ]

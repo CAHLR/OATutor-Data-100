@@ -10,9 +10,6 @@
                 "name": "Lesson worksheet",
                 "topics": "",
                 "allowRecycle": true,
-                "enableCompletionMode": true,
-                "showStuMastery": false,
-                "doMasteryUpdate": false,
                 "learningObjectives": {
                     "bias": 0.85,
                     "bootstrapping": 0.85,
@@ -42,7 +39,7 @@
         "courseLicense": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
         "lessons": [
             {
-                "id": "5et27kh3-kASP-bBVie8mymw",
+                "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
                 "name": "Lesson Pandas",
                 "topics": "",
                 "allowRecycle": true,
@@ -51,7 +48,7 @@
                 }
             },
             {
-                "id": "0J4oH3sc-lfJh-d1qRqOwnTg",
+                "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
                 "name": "Lesson EDA,",
                 "topics": "Data Cleaning & Visualization",
                 "allowRecycle": true,
@@ -60,7 +57,7 @@
                 }
             },
             {
-                "id": "46kTNuXX-rGEg-0UV75xqETK",
+                "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
                 "name": "Lesson Regex",
                 "topics": "",
                 "allowRecycle": true,
@@ -69,7 +66,7 @@
                 }
             },
             {
-                "id": "484fDTrc-PtK4-Qeu3HhqFcH",
+                "id": "5g42kVSj-cv4g-80TtPUaauz",
                 "name": "Lesson Sampling",
                 "topics": "",
                 "allowRecycle": true,

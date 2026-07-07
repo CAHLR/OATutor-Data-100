@@ -27,13 +27,13 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "fruit[\"item\"].value_counts()"
+            "fruit[\"item\"].value\\_counts()"
         ],
         "dependencies": [
             "abca051S25M1Q1Ca-h2"
         ],
-        "title": "Using $$\\operatorname{value_{counts}}\\left(\\right)$$",
-        "text": "Use the $$\\operatorname{value_{counts}}\\left(\\right)$$ method on the 'item' column to count the occurrences of each fruit.",
+        "title": "Using value\\_counts()",
+        "text": "Use the value\\_counts() method on the 'item' column to count the occurrences of each fruit.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -44,13 +44,13 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "fruit[\"item\"].value_counts().index[0]"
+            "fruit[\"item\"].value\\_counts().index[0]"
         ],
         "dependencies": [
             "abca051S25M1Q1Ca-h3"
         ],
         "title": "Accessing the Most Frequent Item",
-        "text": "After using $$\\operatorname{value_{counts}}\\left(\\right)$$, access the first index to get the item that appears the most.",
+        "text": "After using value\\_counts(), access the first index to get the item that appears the most.",
         "variabilization": {},
         "oer": "openai",
         "license": ""

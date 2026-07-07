@@ -40,7 +40,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "nuggets[nuggets['weight']<0.6]['chain'].value_counts()"
+            "nuggets[nuggets['weight']<0.6]['chain'].value\\_counts()"
         ],
         "dependencies": [
             "a9990efrow4c-h3"

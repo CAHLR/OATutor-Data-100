@@ -38,7 +38,7 @@
             "a9990efrow7_p1b-h3"
         ],
         "title": "Using the isna() Function",
-        "text": "The isna() function is used to identify missing values in a DataFrame. You need to apply this function to the $$'hour_{of,visit'}$$ column to find the rows with missing values.",
+        "text": "The isna() function is used to identify missing values in a DataFrame. You need to apply this function to the 'hour\\_of\\_visit' column to find the rows with missing values.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -60,7 +60,7 @@
             "a9990efrow7_p1b-h5"
         ],
         "title": "Using the loc Method",
-        "text": "The loc method is used to access a group of rows and columns by labels or a boolean array. You need to use this method to select the rows where $$'hour_{of,visit'}$$ is missing.",
+        "text": "The loc method is used to access a group of rows and columns by labels or a boolean array. You need to use this method to select the rows where 'hour\\_of\\_visit' is missing.",
         "variabilization": {},
         "oer": "openai",
         "license": ""
@@ -82,7 +82,7 @@
             "a9990efrow7_p1b-h7"
         ],
         "title": "Updating the DataFrame",
-        "text": "You need to update the $$'hour_{of,visit'}$$ column with the replacement values for the rows where it is missing.",
+        "text": "You need to update the 'hour\\_of\\_visit' column with the replacement values for the rows where it is missing.",
         "variabilization": {},
         "oer": "openai",
         "license": ""

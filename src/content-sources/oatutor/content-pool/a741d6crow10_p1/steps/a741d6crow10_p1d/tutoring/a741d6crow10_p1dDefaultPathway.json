@@ -34,9 +34,8 @@
         "oer": "openai",
         "license": "",
         "choices": [
-            "FALSE",
-            "False",
-            "True"
+            "TRUE",
+            "FALSE"
         ]
     },
     {

@@ -5,7 +5,7 @@
     ],
     "problemType": "MultipleChoice",
     "stepTitle": "Choosing a Regex to Isolate Fields",
-    "stepBody": "As part of this data cleaning, a RegEx pattern called $$dino_{pattern}$$ is created to isolate each of the different fields from the above strings using re.findall. Example outputs are shown below. Which of the following could be $$dino_{pattern}$$?\\n##figure1.gif## ",
+    "stepBody": "As part of this data cleaning, a RegEx pattern called dino\\_pattern is created to isolate each of the different fields from the above strings using re.findall. Example outputs are shown below. Which of the following could be dino\\_pattern?\\n##figure1.gif## ",
     "answerType": "string",
     "variabilization": {},
     "choices": [

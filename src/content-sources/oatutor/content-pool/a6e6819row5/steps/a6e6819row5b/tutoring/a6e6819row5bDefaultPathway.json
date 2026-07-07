@@ -27,7 +27,7 @@
         "problemType": "TextBox",
         "answerType": "arithmetic",
         "hintAnswer": [
-            "\\d{3}"
+            "`\\d{3}`"
         ],
         "dependencies": [
             "a6e6819row5b-h2"
@@ -56,7 +56,7 @@
         "problemType": "TextBox",
         "answerType": "string",
         "hintAnswer": [
-            "\\d{1,2}[csx]?"
+            "`\\d{1,2}[csx]?`"
         ],
         "dependencies": [
             "a6e6819row5b-h4"
@@ -86,7 +86,7 @@
         "problemType": "TextBox",
         "answerType": "string",
         "hintAnswer": [
-            "\\d{3}|\\d{1,2}[csx]?"
+            "`\\d{3}|\\d{1,2}[csx]?`"
         ],
         "dependencies": [
             "a6e6819row5b-h6"

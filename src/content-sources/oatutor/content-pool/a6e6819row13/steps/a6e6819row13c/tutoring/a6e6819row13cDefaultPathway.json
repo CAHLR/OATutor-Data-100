@@ -21,7 +21,7 @@
             "a6e6819row13c-h9"
         ],
         "title": "Check for a Literal Period",
-        "text": "Does $$review_3$$ contain a literal period character?",
+        "text": "Does review\\_3 contain a literal period character?",
         "variabilization": {},
         "oer": "",
         "license": "",
@@ -37,7 +37,7 @@
             "a6e6819row13c-h10"
         ],
         "title": "No Period Means No Match",
-        "text": "The pattern r\".*\\.\" looks for text ending at a literal period. Since $$review_3$$ has no period, re.findall returns an empty list.",
+        "text": "The pattern `r\".*\\.\"` looks for text ending at a literal period. Since review\\_3 has no period, re.findall returns an empty list.",
         "variabilization": {},
         "oer": "",
         "license": ""

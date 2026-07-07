@@ -4,7 +4,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Interpret the Anchor",
-        "text": "The caret ** anchors the match to the beginning of the string, so the regex starts checking from the first character of $$review_3$$.",
+        "text": "The caret ** anchors the match to the beginning of the string, so the regex starts checking from the first character of review\\_3.",
         "variabilization": {},
         "oer": "",
         "license": ""
@@ -21,7 +21,7 @@
             "a6e6819row13b-h6"
         ],
         "title": "First Four Characters",
-        "text": "What are the first four characters of $$review_3$$?",
+        "text": "What are the first four characters of review\\_3?",
         "variabilization": {},
         "oer": "",
         "license": "",
