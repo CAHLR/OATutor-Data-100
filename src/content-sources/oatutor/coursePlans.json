@@ -10,6 +10,7 @@
                 "name": "Lesson worksheet",
                 "topics": "",
                 "allowRecycle": true,
+                "chat_display_mode": "Window",
                 "learningObjectives": {
                     "bias": 0.85,
                     "bootstrapping": 0.85,
@@ -41,8 +42,19 @@
             {
                 "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
                 "name": "Lesson Pandas",
-                "topics": "",
+                "topics": "A",
                 "allowRecycle": true,
+                "chat_display_mode": "Window",
+                "learningObjectives": {
+                    "pandas": 0.85
+                }
+            },
+            {
+                "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
+                "name": "Lesson Pandas",
+                "topics": "B",
+                "allowRecycle": true,
+                "chat_display_mode": "Window",
                 "learningObjectives": {
                     "pandas": 0.85
                 }
@@ -50,8 +62,19 @@
             {
                 "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
                 "name": "Lesson EDA,",
-                "topics": "Data Cleaning & Visualization",
+                "topics": "Data Cleaning & Visualization A",
                 "allowRecycle": true,
+                "chat_display_mode": "Window",
+                "learningObjectives": {
+                    "eda": 0.85
+                }
+            },
+            {
+                "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
+                "name": "Lesson EDA,",
+                "topics": "Data Cleaning & Visualization B",
+                "allowRecycle": true,
+                "chat_display_mode": "Window",
                 "learningObjectives": {
                     "eda": 0.85
                 }
@@ -59,8 +82,19 @@
             {
                 "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
                 "name": "Lesson Regex",
-                "topics": "",
+                "topics": "A",
                 "allowRecycle": true,
+                "chat_display_mode": "Window",
+                "learningObjectives": {
+                    "regex": 0.85
+                }
+            },
+            {
+                "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
+                "name": "Lesson Regex",
+                "topics": "B",
+                "allowRecycle": true,
+                "chat_display_mode": "Window",
                 "learningObjectives": {
                     "regex": 0.85
                 }
@@ -68,8 +102,19 @@
             {
                 "id": "5g42kVSj-cv4g-80TtPUaauz",
                 "name": "Lesson Sampling",
-                "topics": "",
+                "topics": "A",
                 "allowRecycle": true,
+                "chat_display_mode": "Window",
+                "learningObjectives": {
+                    "sampling": 0.85
+                }
+            },
+            {
+                "id": "5g42kVSj-cv4g-80TtPUaauz",
+                "name": "Lesson Sampling",
+                "topics": "B",
+                "allowRecycle": true,
+                "chat_display_mode": "Window",
                 "learningObjectives": {
                     "sampling": 0.85
                 }
