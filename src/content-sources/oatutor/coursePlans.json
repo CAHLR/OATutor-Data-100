@@ -41,181 +41,117 @@
         "lessons": [
             {
                 "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
+                "metaId": "EDZiidkt-MKw0-zl5XQANfXv",
                 "name": "Lesson Pandas",
                 "topics": "A",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "pandas": 0.85
-                }
+                "chat_prompt": "PROMPTv1.txt",
+                "learningObjectives": { "pandas": 0.85 }
             },
             {
                 "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
+                "metaId": "7D618ZWH-VpUt-avQ8KyjoY2",
                 "name": "Lesson Pandas",
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "pandas": 0.85
-                }
+                "chat_prompt": "PROMPTv2.txt",
+                "learningObjectives": { "pandas": 0.85 }
             },
             {
                 "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
+                "metaId": "SBaob0Yj-tbIH-uiTh84whkz",
                 "name": "Lesson EDA,",
                 "topics": "Data Cleaning & Visualization A",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "eda": 0.85
-                }
+                "chat_prompt": "PROMPTv1.txt",
+                "learningObjectives": { "eda": 0.85 }
             },
             {
                 "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
+                "metaId": "gXgzQSjB-ieSY-ZaBIaugkr6",
                 "name": "Lesson EDA,",
                 "topics": "Data Cleaning & Visualization B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "eda": 0.85
-                }
+                "chat_prompt": "PROMPTv2.txt",
+                "learningObjectives": { "eda": 0.85 }
             },
             {
                 "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
+                "metaId": "D0a2sbrY-JN01-3XLIyPJK22",
                 "name": "Lesson Regex",
                 "topics": "A",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "regex": 0.85
-                }
+                "chat_prompt": "PROMPTv1.txt",
+                "learningObjectives": { "regex": 0.85 }
             },
             {
                 "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
+                "metaId": "v7bzzyZS-Y2vB-6fPpt4xlzX",
                 "name": "Lesson Regex",
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "regex": 0.85
-                }
+                "chat_prompt": "PROMPTv2.txt",
+                "learningObjectives": { "regex": 0.85 }
             },
             {
                 "id": "5g42kVSj-cv4g-80TtPUaauz",
+                "metaId": "XD83SCb4-JodY-MePztj8t84",
                 "name": "Lesson Sampling",
                 "topics": "A",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "sampling": 0.85
-                }
+                "chat_prompt": "PROMPTv1.txt",
+                "learningObjectives": { "sampling": 0.85 }
             },
             {
                 "id": "5g42kVSj-cv4g-80TtPUaauz",
+                "metaId": "d77DUoV0-K5ki-jgvlq3GkbB",
                 "name": "Lesson Sampling",
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "sampling": 0.85
-                }
+                "chat_prompt": "PROMPTv2.txt",
+                "learningObjectives": { "sampling": 0.85 }
             }
-        ]
-    },
-    {
-        "courseName": "Data100 Midterm 2 Staging Sheet",
-        "language": "en",
-        "courseOER": "https://ds100.org/sp26/assets/exams/fa25/fa25_final_sol.pdf",
-        "courseLicense": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
-        "lessons": [
+        ],
+        "metaLessons": [
             {
-                "id": "4vUtTI63-9kNQ-E2IVYYtXIK",
-                "name": "Lesson Modeling",
-                "topics": "and Regression",
-                "allowRecycle": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/sp26/assets/exams/fa25/fa25_mt2.pdf": 0.85,
-                    "https://ds100.org/sp26/assets/exams/sp25/sp25_final.pdf": 0.85,
-                    "https://ds100.org/sp26/assets/exams/sp25/sp25_mt.pdf": 0.85,
-                    "https://ds100.org/sp26/assets/exams/su25/su25_final.pdf": 0.85
-                }
+                "id": "meta_pandas_root",
+                "type": "meta_lesson",
+                "name": "Pandas (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": ["EDZiidkt-MKw0-zl5XQANfXv", "7D618ZWH-VpUt-avQ8KyjoY2"]
             },
             {
-                "id": "4vUtTI63-9kNQ-E2IVYYtXIK",
-                "name": "Lesson Copy",
-                "topics": "of Modeling and Regression",
-                "allowRecycle": true,
-                "enableCompletionMode": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/sp26/assets/exams/fa25/fa25_mt2.pdf": 0.85,
-                    "https://ds100.org/sp26/assets/exams/sp25/sp25_final.pdf": 0.85,
-                    "https://ds100.org/sp26/assets/exams/sp25/sp25_mt.pdf": 0.85,
-                    "https://ds100.org/sp26/assets/exams/su25/su25_final.pdf": 0.85
-                }
+                "id": "meta_eda_root",
+                "type": "meta_lesson",
+                "name": "EDA, Data Cleaning & Visualization (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": ["SBaob0Yj-tbIH-uiTh84whkz", "gXgzQSjB-ieSY-ZaBIaugkr6"]
             },
             {
-                "id": "35tVoFjW-7yWH-rblSsRKvT9",
-                "name": "Lesson Feature",
-                "topics": "Engineering and Dimensionality",
-                "allowRecycle": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/su26/past_exams/": 0.85
-                }
+                "id": "meta_regex_root",
+                "type": "meta_lesson",
+                "name": "Regex (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": ["D0a2sbrY-JN01-3XLIyPJK22", "v7bzzyZS-Y2vB-6fPpt4xlzX"]
             },
             {
-                "id": "4JXEZxeA-3kTp-8Y3da7LL03",
-                "name": "Lesson Copy",
-                "topics": "of Feature Engineering and Dimensionality",
-                "allowRecycle": true,
-                "enableCompletionMode": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/su26/past_exams/": 0.85
-                }
-            },
-            {
-                "id": "6kSm10eE-eZ5r-yEsGtCcIMV",
-                "name": "Lesson Loss",
-                "topics": "Functions and Gradient Descent",
-                "allowRecycle": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/su26/past_exams/": 0.85
-                }
-            },
-            {
-                "id": "5hqgumt0-6fyI-Fatg1NmSrK",
-                "name": "Lesson Copy",
-                "topics": "of Loss Functions and Gradient Descent",
-                "allowRecycle": true,
-                "enableCompletionMode": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/su26/past_exams/": 0.85
-                }
-            },
-            {
-                "id": "4ZBD6zhq-MYri-eDYfserIfs",
-                "name": "Lesson Regularization",
-                "topics": "and Cross Validation",
-                "allowRecycle": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/su26/past_exams/": 0.85
-                }
-            },
-            {
-                "id": "3I0TMy4o-Pkbb-TGeYGUv2i6",
-                "name": "Lesson Copy",
-                "topics": "of Regularization and Cross Validation",
-                "allowRecycle": true,
-                "enableCompletionMode": true,
-                "chat_display_mode": "Window",
-                "learningObjectives": {
-                    "https://ds100.org/su26/past_exams/": 0.85
-                }
+                "id": "meta_sampling_root",
+                "type": "meta_lesson",
+                "name": "Sampling (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": ["XD83SCb4-JodY-MePztj8t84", "d77DUoV0-K5ki-jgvlq3GkbB"]
             }
         ]
     }

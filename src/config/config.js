@@ -6,7 +6,7 @@ import { SITE_NAME } from "@common/global-config";
 import { cleanObjectKeys } from "../util/cleanObject";
 
 const ThemeContext = React.createContext(0);
-const SITE_VERSION = "1.7";
+const SITE_VERSION = "1.6";
 
 const CURRENT_SEMESTER = calculateSemester(Date.now());
 
@@ -97,8 +97,10 @@ const EQUATION_EDITOR_AUTO_COMMANDS =
     "pi theta sqrt sum prod int alpha beta gamma rho nthroot pm";
 const EQUATION_EDITOR_AUTO_OPERATORS = "sin cos tan";
 
+//const MIDDLEWARE_URL =
+//    "https://87dwtge8b4.execute-api.us-west-1.amazonaws.com/prod";
 const MIDDLEWARE_URL =
-    "https://di2iygvxtg.execute-api.us-west-1.amazonaws.com/prod";
+    "https://gwenv04kx5.execute-api.us-west-1.amazonaws.com/prod";
 
 const HELP_DOCUMENT =
     "https://docs.google.com/document/d/e/2PACX-1vToe2F3RiCx1nwcX9PEkMiBA2bFy9lQRaeWIbyqlc8W_KJ9q-hAMv34QaO_AdEelVY7zjFAF1uOP4pG/pub";
@@ -107,6 +109,8 @@ const DYNAMIC_HINT_URL = process.env.AI_HINT_GENERATION_AWS_ENDPOINT;
 
 const DYNAMIC_HINT_TEMPLATE =
     "<{problem_title}.> <{problem_subtitle}.> <{question_title}.> <{question_subtitle}.> <Student's answer is: {student_answer}.> <The correct answer is: {correct_answer}.> Please give a hint for this.";
+
+const TTS_API_URL = process.env.REACT_APP_TTS_AWS_ENDPOINT;
 
 const MASTERY_THRESHOLD = 0.95;
 // const coursePlans = courses.sort((a, b) => a.courseName.localeCompare(b.courseName));
@@ -134,7 +138,9 @@ const _lessonPlansNoEditor = lessonPlans.filter(
 );
 
 const findLessonById = (ID) => {
-    return _lessonPlansNoEditor.find((lessonPlan) => lessonPlan.id === ID);
+    return _lessonPlansNoEditor.find(
+        (lessonPlan) => lessonPlan.id === ID || lessonPlan.metaId === ID
+    );
 };
 
 export {
@@ -168,6 +174,7 @@ export {
     DO_FOCUS_TRACKING,
     findLessonById,
     SHOW_NOT_CANVAS_WARNING,
-    DEFAULT_LANGUAGE, 
-    AVAILABLE_LANGUAGES
+    DEFAULT_LANGUAGE,
+    AVAILABLE_LANGUAGES,
+    TTS_API_URL
 };

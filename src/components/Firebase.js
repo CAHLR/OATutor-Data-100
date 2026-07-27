@@ -7,11 +7,12 @@ import {
     MAX_BUFFER_SIZE,
 } from "../config/config.js";
 
-import { initializeApp } from "firebase/app";
+import { getApp, getApps, initializeApp } from "firebase/app";
 import {
     arrayUnion,
     doc,
     getFirestore,
+    increment,
     serverTimestamp,
     setDoc,
 } from "firebase/firestore";
@@ -25,10 +26,44 @@ import {
 
 const problemSubmissionsOutput = "problemSubmissions";
 const problemStartLogOutput = "problemStartLogs";
-const GPTExperimentOutput = "GPTExperimentOutput";
 const feedbackOutput = "feedbacks";
 const siteLogOutput = "siteLogs";
 const focusStatus = "focusStatus";
+const chatHistoryOutput = "chatHistory";
+
+function isPlaceholderFirebaseConfig(credentials) {
+    const projectId = credentials?.projectId || "";
+    const apiKey = credentials?.apiKey || "";
+    return (
+        projectId.includes("[projId]") ||
+        apiKey.includes("[apikey]") ||
+        !projectId ||
+        !apiKey
+    );
+}
+
+function isFirestoreFieldValue(value) {
+    return (
+        value &&
+        typeof value === "object" &&
+        typeof value._methodName === "string"
+    );
+}
+
+function sanitizeForFirestore(value) {
+    if (value === undefined) return null;
+    if (isFirestoreFieldValue(value)) return value;
+    if (value === null || typeof value !== "object") return value;
+    if (Array.isArray(value)) {
+        return value.map(sanitizeForFirestore);
+    }
+    return Object.fromEntries(
+        Object.entries(value).map(([key, val]) => [
+            key,
+            sanitizeForFirestore(val),
+        ])
+    );
+}
 
 class Firebase {
     constructor(oats_user_id, credentials, treatment, siteVersion, ltiContext) {
@@ -36,7 +71,14 @@ class Firebase {
             console.debug("Not using firebase for logging");
             return;
         }
-        const app = initializeApp(credentials);
+        if (isPlaceholderFirebaseConfig(credentials)) {
+            console.error(
+                "[Firebase] Logging is enabled but firebaseConfig.js still has placeholder values. " +
+                    "Copy your project config from Firebase Console → Project settings → Your apps, " +
+                    "or set REACT_APP_FIREBASE_CONFIG in .env, then restart npm start."
+            );
+        }
+        const app = getApps().length ? getApp() : initializeApp(credentials);
 
         this.oats_user_id = oats_user_id;
         this.db = getFirestore(app);
@@ -110,22 +152,48 @@ class Firebase {
     */
     async writeData(_collection, data) {
         if (!ENABLE_FIREBASE) return;
+        if (!this.db) {
+            console.warn(
+                `[Firebase] Skipping write to "${_collection}" because Firestore is not initialized.`
+            );
+            return;
+        }
+
         const collection = this.getCollectionName(_collection);
-        const payload = this.addMetaData(data);
+        let payload;
+        try {
+            payload = sanitizeForFirestore(this.addMetaData(data));
+        } catch (err) {
+            console.warn(`Firebase write failed while building payload for "${collection}"`, err);
+            return;
+        }
 
         if (IS_STAGING_OR_DEVELOPMENT) {
-            // console.log("payload: ", payload);
             console.debug("Writing this payload to firebase: ", payload);
         }
 
-        await setDoc(
-            doc(this.db, collection, this._getReadableID()),
-            payload
-        ).catch((err) => {
-            console.log("a non-critical error occurred.");
-            console.log("Error is: ", err);
-            console.debug(err);
-        });
+        const docId = this._getReadableID();
+        try {
+            await Promise.race([
+                setDoc(doc(this.db, collection, docId), payload),
+                new Promise((_, reject) =>
+                    setTimeout(
+                        () =>
+                            reject(
+                                new Error(
+                                    "Firestore write timed out after 10s (check firebaseConfig.js and security rules)"
+                                )
+                            ),
+                        10000
+                    )
+                ),
+            ]);
+            if (_collection === chatHistoryOutput) {
+                console.log(`[chatHistory] saved to "${collection}"`, payload.eventType);
+            }
+        } catch (err) {
+            console.warn(`Firebase write failed for "${collection}"`, err);
+        }
     }
 
     /**
@@ -216,7 +284,9 @@ class Firebase {
         courseName,
         hintType,
         dynamicHint,
-        bioInfo
+        bioInfo,
+        masteryScore = null,
+        kcMastery = null
     ) {
         if (!DO_LOG_DATA) {
             console.debug("Not using firebase for logging (2)");
@@ -241,12 +311,13 @@ class Firebase {
             variabilization,
             lesson,
             Content: courseName,
+            masteryScore,
+            kcMastery,
             knowledgeComponents: step?.knowledgeComponents,
             hintType,
             dynamicHint,
             bioInfo,
         };
-        // return this.writeData(GPTExperimentOutput, data);
         return this.writeData(problemSubmissionsOutput, data);
     }
 
@@ -262,10 +333,11 @@ class Firebase {
         courseName,
         hintType,
         dynamicHint,
-        bioInfo
+        bioInfo,
+        masteryScore = null,
+        kcMastery = null
     ) {
         if (!DO_LOG_DATA) return;
-        console.debug("step", step);
         const data = {
             eventType: "hintScaffoldLog",
             problemID,
@@ -278,17 +350,16 @@ class Firebase {
             hintAnswer: hint?.hintAnswer?.toString(),
             hintIsCorrect: isCorrect,
             hintsFinished,
-            dynamicHint: "abc",
-            bioInfo: "abcedf",
             variabilization,
             Content: courseName,
+            masteryScore,
+            kcMastery,
             lesson,
             knowledgeComponents: step?.knowledgeComponents,
             hintType,
             dynamicHint,
             bioInfo,
         };
-        // return this.writeData(GPTExperimentOutput, data);
         return this.writeData(problemSubmissionsOutput, data);
     }
 
@@ -370,6 +441,66 @@ class Firebase {
         );
     }
 
+    logChatHistory(data) {
+        if (!DO_LOG_DATA) return;
+        const collection = this.getCollectionName(chatHistoryOutput);
+        if (process.env.NODE_ENV === 'development') {
+            console.log(`[chatHistory] writing to "${collection}"`, data?.eventType || data);
+        }
+        return this.writeData(chatHistoryOutput, data);
+    }
+
+    /**
+     * Write or update a chatSessions document.
+     * Called with full initial metadata on session start, then with delta
+     * objects (using Firestore increment()) for counter updates.
+     * Does NOT call addMetaData — caller is responsible for all fields.
+     */
+    async logChatSession(sessionId, data) {
+        if (!DO_LOG_DATA) return;
+        if (!this.db) return;
+        const collection = this.getCollectionName('chatSessions');
+        const docRef = doc(this.db, collection, sessionId);
+        let payload;
+        try {
+            payload = sanitizeForFirestore(data);
+        } catch (err) {
+            console.warn('[Firebase] logChatSession: failed to sanitize payload', err);
+            return;
+        }
+        if (process.env.NODE_ENV === 'development') {
+            console.log(`[chatSessions] upsert "${sessionId}"`, payload);
+        }
+        return setDoc(docRef, payload, { merge: true }).catch((err) => {
+            console.warn('[Firebase] logChatSession write failed', err);
+        });
+    }
+
+    /**
+     * Write one lean chatHistory document for a single user/assistant message.
+     * Only stores session-linking fields + message content; all other metadata
+     * lives in chatSessions and is NOT duplicated here.
+     */
+    async logChatMessage(sessionId, messageData) {
+        if (!DO_LOG_DATA) return;
+        if (!this.db) return;
+        const collection = this.getCollectionName(chatHistoryOutput);
+        const docId = this._getReadableID();
+        let payload;
+        try {
+            payload = sanitizeForFirestore({ sessionId, ...messageData });
+        } catch (err) {
+            console.warn('[Firebase] logChatMessage: failed to sanitize payload', err);
+            return;
+        }
+        if (process.env.NODE_ENV === 'development') {
+            console.log(`[chatHistory] message "${docId}"`, payload?.role);
+        }
+        return setDoc(doc(this.db, collection, docId), payload).catch((err) => {
+            console.warn('[Firebase] logChatMessage write failed', err);
+        });
+    }
+
     submitFeedback(
         problemID,
         feedback,
@@ -408,3 +539,4 @@ class Firebase {
 }
 
 export default Firebase;
+export { increment };

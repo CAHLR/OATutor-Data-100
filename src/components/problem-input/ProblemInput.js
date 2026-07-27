@@ -12,6 +12,8 @@ import { shuffleArray } from "../../util/shuffleArray";
 import { EQUATION_EDITOR_AUTO_COMMANDS, EQUATION_EDITOR_AUTO_OPERATORS, ThemeContext } from "../../config/config";
 import { stagingProp } from "../../util/addStagingProperty";
 import { parseMatrixTex } from "../../util/parseMatrixTex";
+import withWidth from "@material-ui/core/withWidth";
+import { isMobileWidth } from "../../util/responsive";
 
 class ProblemInput extends React.Component {
     static contextType = ThemeContext;
@@ -120,7 +122,8 @@ class ProblemInput extends React.Component {
     }
 
     render() {
-        const { classes, state, index, showCorrectness, allowRetry, variabilization } = this.props;
+        const { classes, state, index, showCorrectness, allowRetry, variabilization, textBoxLayout, width } = this.props;
+        const isMobile = isMobileWidth(width);
         const { use_expanded_view, debug } = this.context;
         let { problemType, stepAnswer, hintAnswer, units } = this.props.step;
         const keepMCOrder = this.props.keepMCOrder;
@@ -140,11 +143,21 @@ class ProblemInput extends React.Component {
             window.mathVirtualKeyboard.layouts = ["default"];
         }
 
+        const defaultLayout = {
+            leftMd: 2,
+            mainMd: 6,
+            rightMd: 3,
+        };
+        const { leftMd, mainMd, rightMd } = {
+            ...defaultLayout,
+            ...(textBoxLayout || {}),
+        };
+
         return (
-            <Grid container spacing={0} justifyContent="center" alignItems="center"
+            <Grid container spacing={0} justifyContent="flex-start" alignItems="center"
                 className={clsx(disableInput && 'disable-interactions')}>
-                <Grid item xs={1} md={problemType === "TextBox" ? 4 : false}/>
-                <Grid item xs={9} md={problemType === "TextBox" ? 3 : 12}>
+                <Grid item xs={false} md={problemType === "TextBox" ? leftMd : false}/>
+                <Grid item xs={12} sm={isMobile ? 12 : 9} md={problemType === "TextBox" ? mainMd : 12}>
                     {(problemType === "TextBox" && this.props.step.answerType !== "string") && (
                         <math-field
                             ref={this.mathFieldRef}
@@ -158,8 +171,7 @@ class ProblemInput extends React.Component {
                             autoCommands={EQUATION_EDITOR_AUTO_COMMANDS}
                             autoOperatorNames={EQUATION_EDITOR_AUTO_OPERATORS}
                         >
-                            </math-field>
-
+                        </math-field>
                     )}               
                     {(problemType === "TextBox" && this.props.step.answerType === "string") && (
                         <TextField
@@ -245,15 +257,17 @@ class ProblemInput extends React.Component {
                         />
                     )}
                 </Grid>
-                <Grid item xs={2} md={1}>
-                    <div style={{ marginLeft: "20%" }}>
-                        {units && renderText(units, this.context.problemID, variabilization, this.context)}
+                {units && (
+                <Grid item xs={12} sm={isMobile ? 12 : 2} md={1}>
+                    <div style={{ marginLeft: isMobile ? 0 : "20%", marginTop: isMobile ? 4 : 0 }}>
+                        {renderText(units, this.context.problemID, variabilization, this.context)}
                     </div>
                 </Grid>
-                <Grid item xs={false} md={problemType === "TextBox" ? 3 : false}/>
+                )}
+                <Grid item xs={false} md={problemType === "TextBox" ? rightMd : false}/>
             </Grid>
         )
     }
 }
 
-export default ProblemInput
+export default withWidth()(ProblemInput);
