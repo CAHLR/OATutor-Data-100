@@ -756,6 +756,11 @@ class Platform extends React.Component {
     const metaName = this.metaLesson?.name || "Meta lesson";
     const totalCount = this.metaLessonLessons.length;
     const currentIndex = this.currentMetaLessonIndex;
+    // Match the width of the problem column below (Problem.js renders the problem in
+    // a Grid item of md={drawerOpen ? 8 : 7} out of 12, with the hints panel beside it),
+    // so this header doesn't stretch the full container width and look detached.
+    const isMobileWidthView = isMobileWidth(this.props.width);
+    const headerWidth = isMobileWidthView ? "100%" : `${((this.state.drawerOpen ? 8 : 7) / 12) * 100}%`;
     // Progress counts are intentionally hidden from students during the study.
     // The per-lesson chips are also hidden when the resolved path is a single
     // lesson (as in the Data 100 A/B meta-lessons), where they add no information.
@@ -769,6 +774,8 @@ class Platform extends React.Component {
           borderRadius: 8,
           padding: "12px 16px",
           marginBottom: 16,
+          width: headerWidth,
+          boxSizing: "border-box",
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
