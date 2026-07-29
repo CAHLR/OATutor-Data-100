@@ -96,7 +96,7 @@ class LessonSelection extends React.Component {
                         alignItems="center"
                         justifyContent="center"
                     >
-                        <Box width="75%" maxWidth={1500} role={"main"}>
+                        <Box width="100%" maxWidth={1500} style={{ paddingLeft: 16, paddingRight: 16 }} role={"main"}>
                             <center>
                                 {this.isPrivileged
                                     ? <h1>{translate('lessonSelection.welcomeInstructor')}</h1>
@@ -119,61 +119,175 @@ class LessonSelection extends React.Component {
                                         .map((course, i) =>
                                             <Grid item xs={12} sm={6} md={4} key={course.courseName}>
                                                 <center>
-                                                    <Paper className={classes.paper}>
+                                                    {/* card, text, and icon scale in proportion to one another */}
+                                                    <Paper className={classes.paper} style={{ fontSize: "1rem", textAlign: "center" }}>
                                                         <h2 style={{
-                                                            marginTop: "5px",
-                                                            marginBottom: "10px"
+                                                            minHeight: "2.5em",
+                                                            marginTop: "0.2em",
+                                                            marginBottom: "0.4em",
+                                                            textAlign: "center",
+                                                            display: "flex",
+                                                            alignItems: "center",
+                                                            justifyContent: "center",
+                                                            wordBreak: "break-word",
                                                         }}>{course.courseName}</h2>
                                                         <IconButton aria-label={`View Course ${i}`}
                                                             aria-roledescription={`Navigate to course ${i}'s page to view available lessons`}
                                                             role={"link"}
-                                                            // onClick={() => {
-                                                            //     this.props.history.push(`/courses/${i}`)
-                                                            // }}
-                                                            onClick={() => this.handleCourseSelect(course, i)}
-                                                            >
+                                                            onClick={() => {
+                                                                this.props.selectCourse(course);
+                                                                this.props.history.push(`/courses/${i}`)
+                                                            }}>
                                                             <img
-                                                                src={`${process.env.PUBLIC_URL}/static/images/icons/folder.png`}
-                                                                width="64px"
-                                                                alt="folderIcon"/>
+                                                                src={`${process.env.PUBLIC_URL}/static/images/icons/folder_outline_2.svg`}
+                                                                // width="56px"
+                                                                alt="folderIcon"
+                                                                style= {{ width: "2.6em" }}
+                                                            />
                                                         </IconButton>
                                                     </Paper>
                                                 </center>
                                             </Grid>
                                         )
-                                    : this.coursePlans[this.props.courseNum].lessons.map((lesson, i) => {
+                                    : (() => {
+                                        const course = this.coursePlans[this.props.courseNum];
+                                        const metaLessons = Array.isArray(course.metaLessons) ? course.metaLessons : [];
+                                        // Hide any lesson that a meta-lesson can resolve to. Students should only
+                                        // reach those through the meta-lesson, which handles the A/B assignment --
+                                        // picking a variant directly would bypass it. Lessons not referenced by any
+                                        // meta-lesson still show normally.
+                                        const metaLessonChildIds = new Set();
+                                        metaLessons.forEach((m) => {
+                                            (Array.isArray(m.lessons) ? m.lessons : []).forEach((childId) => metaLessonChildIds.add(childId));
+                                        });
+                                        const visibleLessons = course.lessons.filter(
+                                            (lesson) => !metaLessonChildIds.has(lesson.metaId) && !metaLessonChildIds.has(lesson.id)
+                                        );
                                         return (
-                                            <Grid item xs={12} sm={6} md={4} key={i}>
-    <center>
-      <Paper className={classes.paper} style={{ position: 'relative' }}>
-        {/* top-right “view all problems” button */}
-        <IconButton
-          size="small"
-          style={{ position: 'absolute', top: 8, right: 8 }}
-          aria-label={`View all problems for lesson ${lesson.id}`}
-          onClick={() => this.props.history.push(`/lessons/${lesson.id}/problems`)}
-        >
-          <MenuBookIcon fontSize="small" />
-        </IconButton>
+                                            <Fragment>
+                                            {visibleLessons.map((lesson, i) => {
+                                                return (
+                                                    <Grid item xs={12} sm={6} md={4} key={i}>
+                                                    <center>
+                                                    <Paper className={classes.paper} style={{ position: "relative", height: "12rem" }}>
+                                                        <IconButton
+                                                            size="small"
+                                                            style={{ position: 'absolute', top: 8, right: 8 }}
+                                                            aria-label={`View all problems for lesson ${lesson.id}`}
+                                                            onClick={() => this.props.history.push(`/lessons/${lesson.id}/problems`)}
+                                                        >
+                                                            <MenuBookIcon fontSize="small" />
+                                                        </IconButton>
 
-        <h2 style={{ marginTop: 5, marginBottom: 10 }}>
-          {lesson.name.replace(/##/g, "")}
-        </h2>
-        <h3 style={{ marginTop: 5 }}>{lesson.topics}</h3>
+                                                        <div
+                                                            style={{
+                                                                height: "2.5em",
+                                                                marginTop: 5,
+                                                                marginBottom: 10,
+                                                                display: "flex",
+                                                                alignItems: "center",
+                                                                justifyContent: "center",
+                                                                textAlign: "center",
+                                                            }}
+                                                        >
+                                                            <h2 style={{ margin: 0 }}>{lesson.name.replace(/##/g, "")}</h2>
+                                                        </div>
 
-        <Button
-          variant="contained"
-          color="primary"
-          className={classes.button}
-          onClick={() => this.props.history.push(`/lessons/${lesson.id}`)}
-        >
-          {translate('lessonSelection.onlyselect')}
-        </Button>
-      </Paper>
-    </center>
-  </Grid>
-                                        )
-                                    })
+                                                        <div
+                                                            style={{
+                                                                height: "2em",
+                                                                marginTop: 5,
+                                                                display: "flex",
+                                                                alignItems: "center",
+                                                                justifyContent: "center",
+                                                                textAlign: "center",
+                                                            }}
+                                                        >
+                                                            <h3 style={{ margin: 0 }}>{lesson.topics}</h3>
+                                                        </div>
+
+                                                        <Button
+                                                            variant="contained"
+                                                            color="primary"
+                                                            className={classes.button}
+                                                            style={{
+                                                                width: "8em",
+                                                                position: "absolute",
+                                                                bottom: "1.2em",
+                                                                left: "50%",
+                                                                transform: "translateX(-50%)"
+                                                            }}
+                                                            onClick={() => this.props.history.push(`/lessons/${lesson.id}`)}
+                                                        >
+                                                            {translate('lessonSelection.onlyselect')}
+                                                        </Button>
+                                                    </Paper>
+                                                    </center>
+                                                </Grid>
+                                                )
+                                            })}
+                                            {metaLessons.length > 0 && (
+                                                <Fragment>
+                                                    <Grid item xs={12}>
+                                                        <Typography variant="h5" component="h3" style={{ marginTop: 16, marginBottom: 8 }}>
+                                                            Meta Lessons
+                                                        </Typography>
+                                                    </Grid>
+                                                    {metaLessons.map((metaLesson) => (
+                                                        <Grid item xs={12} sm={6} md={4} key={metaLesson.id}>
+                                                        <center>
+                                                        <Paper className={classes.paper} style={{ position: "relative", height: "12rem" }}>
+                                                            <div
+                                                                style={{
+                                                                    height: "2.5em",
+                                                                    marginTop: 5,
+                                                                    marginBottom: 10,
+                                                                    display: "flex",
+                                                                    alignItems: "center",
+                                                                    justifyContent: "center",
+                                                                    textAlign: "center",
+                                                                }}
+                                                            >
+                                                                <h2 style={{ margin: 0 }}>{metaLesson.name || metaLesson.id}</h2>
+                                                            </div>
+
+                                                            <div
+                                                                style={{
+                                                                    height: "2em",
+                                                                    marginTop: 5,
+                                                                    display: "flex",
+                                                                    alignItems: "center",
+                                                                    justifyContent: "center",
+                                                                    textAlign: "center",
+                                                                }}
+                                                            >
+                                                                <h3 style={{ margin: 0, color: "#5F6368" }}>Meta lesson</h3>
+                                                            </div>
+
+                                                            <Button
+                                                                variant="contained"
+                                                                color="primary"
+                                                                className={classes.button}
+                                                                style={{
+                                                                    width: "8em",
+                                                                    position: "absolute",
+                                                                    bottom: "1.2em",
+                                                                    left: "50%",
+                                                                    transform: "translateX(-50%)"
+                                                                }}
+                                                                onClick={() => this.props.history.push(`/lessons/${metaLesson.id}`)}
+                                                            >
+                                                                {translate('lessonSelection.onlyselect')}
+                                                            </Button>
+                                                        </Paper>
+                                                        </center>
+                                                    </Grid>
+                                                    ))}
+                                                </Fragment>
+                                            )}
+                                            </Fragment>
+                                        );
+                                    })()
                                 }
                             </Grid>
                             <Spacer/>
@@ -184,10 +298,24 @@ class LessonSelection extends React.Component {
                         <Grid item xs={3} sm={3} md={5} key={1}/>
                         {!this.isPrivileged && <Grid item xs={6} sm={6} md={2} key={2}>
                             {this.state.preparedRemoveProgress ?
-                                <Button className={classes.button} style={{ width: "100%" }} size="small"
+                                <Button className={classes.button} size="small"
+                                        style={{ 
+                                            width: "100%", 
+                                            color: "#3F7091",
+                                            backgroundColor: "transparent",
+                                            border: "1px solid #4F86A8",
+                                            boxShadow: "none"
+                                        }} 
                                     onClick={this.removeProgress}
                                     disabled={this.state.removedProgress}>{this.state.removedProgress ? translate('lessonSelection.reset') : translate('lessonSelection.aresure')}</Button> :
-                                <Button className={classes.button} style={{ width: "100%" }} size="small"
+                                <Button className={classes.button} size="small"
+                                    style={{ 
+                                        width: "100%", 
+                                        color: "#3F7091",
+                                        backgroundColor: "transparent",
+                                        border: "1px solid #4F86A8",
+                                        boxShadow: "none"
+                                    }} 
                                     onClick={this.prepareRemoveProgress}
                                     disabled={this.state.preparedRemoveProgress}>{translate('lessonSelection.resetprogress')}</Button>}
                         </Grid>}
@@ -195,12 +323,17 @@ class LessonSelection extends React.Component {
                     </Grid>
                     <Spacer/>
                 </div>
+
+
+
                 <footer>
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
                         <div style={{ marginLeft: 20, fontSize: 16 }}>
                             {SHOW_COPYRIGHT && <>© {new Date().getFullYear()} {SITE_NAME}</>}
                         </div>
-                        <div style={{ display: "flex", flexGrow: 1, marginRight: 20, justifyContent: "flex-end" }}>
+
+
+                        {/* <div style={{ display: "flex", flexGrow: 1, marginRight: 20, justifyContent: "flex-end" }}>
                             <IconButton aria-label="about" title={`About ${SITE_NAME}`}
                                 onClick={this.togglePopup}>
                                 <HelpOutlineOutlinedIcon htmlColor={"#000"} style={{
@@ -211,9 +344,14 @@ class LessonSelection extends React.Component {
                         </div>
                         <Popup isOpen={showPopup} onClose={this.togglePopup}>
                             <About />
-                        </Popup>
+                        </Popup> */}
+
                     </div>
                 </footer>
+
+
+
+
             </>
         )
     }
