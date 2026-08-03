@@ -48,6 +48,17 @@ import withWidth from '@material-ui/core/withWidth';
 class ProblemCard extends React.Component {
     static contextType = ThemeContext;
 
+    getHintBottomOutAnswer = (hintAnswer) => {
+        if (Array.isArray(hintAnswer)) {
+            return (
+                hintAnswer.find((answer) => typeof answer === "string" && answer.trim() !== "") ||
+                ""
+            );
+        }
+
+        return typeof hintAnswer === "string" ? hintAnswer : "";
+    };
+
     constructor(props, context) {
         super(props);
         console.log("problem lesson props:", props);
@@ -110,7 +121,7 @@ class ProblemCard extends React.Component {
             this.hints.push({
                 id: this.step.id + "-h" + (this.hints.length + 1),
                 title: this.translate('hintsystem.answer'),
-                text: this.translate('hintsystem.answerIs') + this.step.stepAnswer,
+                text: this.translate('hintsystem.answerIs') + this.getHintBottomOutAnswer(this.step.stepAnswer),
                 type: "bottomOut",
                 dependencies: Array.from(Array(this.hints.length).keys()),
             });
@@ -128,7 +139,7 @@ class ProblemCard extends React.Component {
                             "-s" +
                             (hint.subHints.length + 1),
                         title: this.translate('hintsystem.answer'),
-                        text: this.translate('hintsystem.answerIs') + hint.hintAnswer[0],
+                        text: this.translate('hintsystem.answerIs') + this.getHintBottomOutAnswer(hint.hintAnswer),
                         type: "bottomOut",
                         dependencies: Array.from(
                             Array(hint.subHints.length).keys()
@@ -168,7 +179,7 @@ class ProblemCard extends React.Component {
                 type: "gptHint",  // Custom type for GPT hint
                 dependencies: [],
             };
-        
+
             this.hints.unshift(gptHint);
         }
     }
@@ -244,7 +255,7 @@ class ProblemCard extends React.Component {
             this.state.activeHintType === "normal"
         ) {
             this.setState({
-                activeHintType: "none",
+                                text: this.translate('hintsystem.answerIs') + this.getHintBottomOutAnswer(hint.hintAnswer),
             });
         }
 
@@ -671,7 +682,7 @@ class ProblemCard extends React.Component {
                 this.hints.push({
                     id: this.step.id + "-h" + (this.hints.length + 1),
                     title: this.translate('hintsystem.answer'),
-                    text: this.translate('hintsystem.answerIs') + this.step.stepAnswer,
+                    text: this.translate('hintsystem.answerIs') + this.getHintBottomOutAnswer(this.step.stepAnswer),
                     type: "bottomOut",
                     dependencies: Array.from(Array(this.hints.length).keys()),
                 });
@@ -689,7 +700,7 @@ class ProblemCard extends React.Component {
                                 "-s" +
                                 (hint.subHints.length + 1),
                             title: this.translate('hintsystem.answer'),
-                            text: this.translate('hintsystem.answerIs') + hint.hintAnswer[0],
+                            text: this.translate('hintsystem.answerIs') + this.getHintBottomOutAnswer(hint.hintAnswer),
                             type: "bottomOut",
                             dependencies: Array.from(
                                 Array(hint.subHints.length).keys()
@@ -883,7 +894,7 @@ class ProblemCard extends React.Component {
                         </h2>
                     )}
                         {showCardHeader && (
-                            <div className={"classes.stepBody"}>
+                            <div className={classes.stepBody}>
                                 {renderText(
                                     this.step.stepBody,
                                     problemID,
