@@ -139,7 +139,7 @@ class HintTextbox extends React.Component {
                                  style={{ visibility: "hidden" }}/>
                         }
                     </Grid>
-                    <Grid item md={1}></Grid>
+                    <Grid item md={2}></Grid>
                     <Grid item xs={4} sm={4} md={2}>
                         <center>
                             <Button className={classes.button} style={{ width: "80%" }} size="small"

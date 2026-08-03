@@ -893,23 +893,23 @@ class ProblemCard extends React.Component {
                             <hr />
                         </h2>
                     )}
-                        {showCardHeader && (
-                            <div className={classes.stepBody}>
-                                {renderText(
-                                    this.step.stepBody,
-                                    problemID,
-                                    chooseVariables(
-                                        Object.assign(
-                                            {},
-                                            problemVars,
-                                            this.step.variabilization
-                                        ),
-                                        seed
+                    {this.step.stepBody && this.step.stepBody.trim() !== "" && (
+                        <div className={classes.stepBody}>
+                            {renderText(
+                                this.step.stepBody,
+                                problemID,
+                                chooseVariables(
+                                    Object.assign(
+                                        {},
+                                        problemVars,
+                                        this.step.variabilization
                                     ),
-                                    this.context
-                                )}
-                            </div>
-                        )}
+                                    seed
+                                ),
+                                this.context
+                            )}
+                        </div>
+                    )}
                             {inlineHints}
 
                             <div className={classes.root}>
