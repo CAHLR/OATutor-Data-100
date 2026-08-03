@@ -49,7 +49,8 @@ const styles = theme => ({
         //textAlign: 'center',
         fontSize: 20,
         marginTop: 10,
-        marginLeft: 10
+        marginLeft: 10,
+        marginBottom: 10
     },
 
     inputField: {

@@ -153,7 +153,7 @@ class HintTextbox extends React.Component {
                             </Button>
                         </center>
                     </Grid>
-                    <Grid item md={1}></Grid>
+                    <Grid item md={2}></Grid>
                     <Grid item xs={4} sm={3} md={1}>
                         <div style={{
                             display: "flex",
@@ -163,7 +163,7 @@ class HintTextbox extends React.Component {
                         }}>
                             {(!this.showCorrectness || !this.allowRetry) &&
                                 <img className={classes.checkImage}
-                                    style={{ opacity: this.state.isCorrect == null ? 0 : 1, width: "45%" }}
+                                    style={{ opacity: this.state.isCorrect == null ? 0 : 1, width: "75%" }}
                                     alt="Exclamation Mark Icon"
                                     title={`The instructor has elected to ${joinList(!this.showCorrectness && 'hide correctness', !this.allowRetry && "disallow retries")}`}
                                     {...stagingProp({
@@ -173,7 +173,7 @@ class HintTextbox extends React.Component {
                             }
                             {this.state.isCorrect && this.showCorrectness && this.allowRetry &&
                                 <img className={classes.checkImage}
-                                    style={{ opacity: this.state.checkMarkOpacity, width: "45%" }}
+                                    style={{ opacity: this.state.checkMarkOpacity, width: "75%" }}
                                     alt="Green Checkmark Icon"
                                     {...stagingProp({
                                         "data-selenium-target": `step-correct-img-${hintIndex}`
@@ -182,7 +182,7 @@ class HintTextbox extends React.Component {
                             }
                             {this.state.isCorrect === false && this.showCorrectness && this.allowRetry &&
                                 <img className={classes.checkImage}
-                                    style={{ opacity: 100 - this.state.checkMarkOpacity, width: "45%" }}
+                                    style={{ opacity: 100 - this.state.checkMarkOpacity, width: "75%" }}
                                     alt="Red X Icon"
                                     {...stagingProp({
                                         "data-selenium-target": `step-correct-img-${hintIndex}`
