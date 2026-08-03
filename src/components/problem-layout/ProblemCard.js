@@ -255,7 +255,7 @@ class ProblemCard extends React.Component {
             this.state.activeHintType === "normal"
         ) {
             this.setState({
-                                text: this.translate('hintsystem.answerIs') + this.getHintBottomOutAnswer(hint.hintAnswer),
+                                activeHintType: "none",
             });
         }
 
