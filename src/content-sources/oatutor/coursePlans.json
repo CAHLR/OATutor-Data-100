@@ -292,14 +292,31 @@
         ]
     },
     {
-        "courseName": "Pre Test",
+        "courseName": "Forms",
         "language": "en",
         "courseOER": "https://ds100.org/sp26/assets/exams/fa25/fa25_final_sol.pdf",
         "courseLicense": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
         "lessons": [
             {
                 "id": "6hktQVdT-p8k8-9X8T2yiRtu",
-                "name": "Lesson Sheet1",
+                "name": "Lesson Pre",
+                "topics": "Test",
+                "allowRecycle": true,
+                "giveStuFeedback": false,
+                "giveStuHints": false,
+                "doMasteryUpdate": false,
+                "keepMCOrder": true,
+                "showStuMastery": false,
+                "giveStuBottomHint": false,
+                "giveHintOnIncorrect": false,
+                "chat_display_mode": "Off",                
+                "learningObjectives": {
+                    "survey": 0.85
+                }
+            },
+            {
+                "id": "7XcHND01-8pgZ-LnOGzNOxgI",
+                "name": "Lesson Consent",
                 "topics": "",
                 "allowRecycle": true,
                 "giveStuFeedback": false,
@@ -309,9 +326,9 @@
                 "showStuMastery": false,
                 "giveStuBottomHint": false,
                 "giveHintOnIncorrect": false,
-                "chat_display_mode": "Off",
+                "chat_display_mode": "Off",                
                 "learningObjectives": {
-                    "survey": 0.85
+                    "consent": 0.85
                 }
             }
         ]
