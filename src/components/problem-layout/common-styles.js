@@ -50,7 +50,6 @@ const styles = theme => ({
         fontSize: 20,
         marginTop: 10,
         marginLeft: 10,
-        marginBottom: 10
     },
 
     inputField: {
