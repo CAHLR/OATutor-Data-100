@@ -163,7 +163,7 @@ class HintTextbox extends React.Component {
                         }}>
                             {(!this.showCorrectness || !this.allowRetry) &&
                                 <img className={classes.checkImage}
-                                    style={{ opacity: this.state.isCorrect == null ? 0 : 1, width: "75%" }}
+                                    style={{ opacity: this.state.isCorrect == null ? 0 : 1, width: "100%" }}
                                     alt="Exclamation Mark Icon"
                                     title={`The instructor has elected to ${joinList(!this.showCorrectness && 'hide correctness', !this.allowRetry && "disallow retries")}`}
                                     {...stagingProp({
@@ -173,7 +173,7 @@ class HintTextbox extends React.Component {
                             }
                             {this.state.isCorrect && this.showCorrectness && this.allowRetry &&
                                 <img className={classes.checkImage}
-                                    style={{ opacity: this.state.checkMarkOpacity, width: "75%" }}
+                                    style={{ opacity: this.state.checkMarkOpacity, width: "100%" }}
                                     alt="Green Checkmark Icon"
                                     {...stagingProp({
                                         "data-selenium-target": `step-correct-img-${hintIndex}`
@@ -182,7 +182,7 @@ class HintTextbox extends React.Component {
                             }
                             {this.state.isCorrect === false && this.showCorrectness && this.allowRetry &&
                                 <img className={classes.checkImage}
-                                    style={{ opacity: 100 - this.state.checkMarkOpacity, width: "75%" }}
+                                    style={{ opacity: 100 - this.state.checkMarkOpacity, width: "100%" }}
                                     alt="Red X Icon"
                                     {...stagingProp({
                                         "data-selenium-target": `step-correct-img-${hintIndex}`
