@@ -34,7 +34,15 @@ export function loadPromptTemplate(chatPrompt) {
     return { template, file };
 }
 
-export function buildAgentPrompt({ userMessage, problemContext, studentState, conversationHistory, extracted = {}, chatPrompt }) {
+export function buildAgentPrompt({
+    userMessage,
+    problemContext,
+    studentState,
+    conversationHistory,
+    extracted = {},
+    chatPrompt,
+    documentContextSection = null,
+}) {
     const { template: promptTemplate } = loadPromptTemplate(chatPrompt);
     const safeUserMessage = typeof userMessage === 'string' ? userMessage : '';
     
@@ -124,6 +132,17 @@ export function buildAgentPrompt({ userMessage, problemContext, studentState, co
     // Add conversation history if it exists
     if (conversationHistory && conversationHistory.length > 0) {
         messages.push(...conversationHistory);
+    }
+
+    // Private course-document reference (server-only; never stored in client history).
+    if (
+        typeof documentContextSection === 'string' &&
+        documentContextSection.trim()
+    ) {
+        messages.push({
+            role: 'system',
+            content: documentContextSection.trim(),
+        });
     }
 
     // Build the last user message.
