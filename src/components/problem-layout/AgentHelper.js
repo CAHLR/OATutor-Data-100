@@ -45,6 +45,7 @@ export class AgentHelper {
             sessionId: this.sessionId,
             turnId: this.turnId,
             userMessage: safeUserMessage,
+            lessonId: extracted?.lessonId || null,
             problemContext: problemContext,
             studentState: studentState,
             extracted: extracted || {},
