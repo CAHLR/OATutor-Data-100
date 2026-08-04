@@ -55,3 +55,4 @@ aws/aiAgentGeneration/documents/assets/tables/*
 !aws/aiAgentGeneration/documents/assets/tables/.gitkeep
 # Keep raw PDFs out of git by default (large); use git-lfs or local drop-in
 aws/aiAgentGeneration/documents/raw/*.pdf
+*.zip
