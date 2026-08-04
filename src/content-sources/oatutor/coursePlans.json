@@ -7,6 +7,7 @@
         "lessons": [
             {
                 "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
+                "metaId": "fOT5pYFa-ikze-pg6cATQpvr",
                 "name": "Lesson Pandas",
                 "topics": "A",
                 "allowRecycle": true,
@@ -17,16 +18,19 @@
             },
             {
                 "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
+                "metaId": "NjeEHN5X-BNII-hpbmp8ZPXb",
                 "name": "Lesson Pandas",
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "pandas": 0.85
                 }
             },
             {
                 "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
+                "metaId": "sFY6Lj0Q-PSJA-l5ldF7LaQp",
                 "name": "Lesson EDA,",
                 "topics": "Data Cleaning & Visualization A",
                 "allowRecycle": true,
@@ -37,16 +41,19 @@
             },
             {
                 "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
+                "metaId": "aP8ja8Sg-Ilrm-oko2OjNOBt",
                 "name": "Lesson EDA,",
                 "topics": "Data Cleaning & Visualization B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "eda": 0.85
                 }
             },
             {
                 "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
+                "metaId": "wPBMutbE-br6S-8sRgocUZHm",
                 "name": "Lesson Regex",
                 "topics": "A",
                 "allowRecycle": true,
@@ -57,6 +64,7 @@
             },
             {
                 "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
+                "metaId": "iilEurND-cRTE-vuErAy86H1",
                 "name": "Lesson Regex",
                 "topics": "B",
                 "allowRecycle": true,
@@ -67,6 +75,7 @@
             },
             {
                 "id": "5g42kVSj-cv4g-80TtPUaauz",
+                "metaId": "NBxeKIgf-l0Uu-LjRd1mHqKk",
                 "name": "Lesson Sampling",
                 "topics": "A",
                 "allowRecycle": true,
@@ -77,13 +86,60 @@
             },
             {
                 "id": "5g42kVSj-cv4g-80TtPUaauz",
+                "metaId": "TOinr6yb-kTFf-lHQOPQq2hT",
                 "name": "Lesson Sampling",
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "sampling": 0.85
                 }
+            }
+        ],
+        "metaLessons": [
+            {
+                "id": "meta_pandas_root",
+                "type": "meta_lesson",
+                "name": "Pandas (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "fOT5pYFa-ikze-pg6cATQpvr",
+                    "NjeEHN5X-BNII-hpbmp8ZPXb"
+                ]
+            },
+            {
+                "id": "meta_eda_root",
+                "type": "meta_lesson",
+                "name": "EDA, Data Cleaning & Visualization (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "sFY6Lj0Q-PSJA-l5ldF7LaQp",
+                    "aP8ja8Sg-Ilrm-oko2OjNOBt"
+                ]
+            },
+            {
+                "id": "meta_regex_root",
+                "type": "meta_lesson",
+                "name": "Regex",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "wPBMutbE-br6S-8sRgocUZHm"
+                ]
+            },
+            {
+                "id": "meta_sampling_root",
+                "type": "meta_lesson",
+                "name": "Sampling (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "NBxeKIgf-l0Uu-LjRd1mHqKk",
+                    "TOinr6yb-kTFf-lHQOPQq2hT"
+                ]
             }
         ]
     },
@@ -95,6 +151,7 @@
         "lessons": [
             {
                 "id": "2rUWBGFx-B2tl-D3NhTKAmOg",
+                "metaId": "O2y3oPAY-nfz4-mfhiBhsRlW",
                 "name": "Lesson Modeling",
                 "topics": "and Regression A",
                 "allowRecycle": true,
@@ -105,16 +162,19 @@
             },
             {
                 "id": "2rUWBGFx-B2tl-D3NhTKAmOg",
+                "metaId": "Vht4kymC-eMKh-Ywhi6fIFmT",
                 "name": "Lesson Modeling",
                 "topics": "and Regression B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "modeling_and_regression": 0.85
                 }
             },
             {
                 "id": "6hbieM5I-ub2M-32VuhgrRG2",
+                "metaId": "oAin1yRv-FLGZ-QACq9n6YPp",
                 "name": "Lesson Feature",
                 "topics": "Engineering and Dimensionality A",
                 "allowRecycle": true,
@@ -125,16 +185,19 @@
             },
             {
                 "id": "6hbieM5I-ub2M-32VuhgrRG2",
+                "metaId": "hY7KrAmj-DPml-ehW4r1BJkc",
                 "name": "Lesson Feature",
                 "topics": "Engineering and Dimensionality B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "feature_engineering_and_dimensionality": 0.85
                 }
             },
             {
                 "id": "2Pb13WOW-4ZM3-q5InzFY4FQ",
+                "metaId": "HfOl6QOB-l0Ff-dLVP1svF9U",
                 "name": "Lesson Loss",
                 "topics": "Functions and Gradient Descent A",
                 "allowRecycle": true,
@@ -145,16 +208,19 @@
             },
             {
                 "id": "2Pb13WOW-4ZM3-q5InzFY4FQ",
+                "metaId": "WpTqa1sA-yclO-U5pCJTqEoG",
                 "name": "Lesson Loss",
                 "topics": "Functions and Gradient Descent B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "loss_functions_and_gradient_descent": 0.85
                 }
             },
             {
                 "id": "2WGys9Yi-r1t0-zhIWrJIPvU",
+                "metaId": "DC5KHqhy-dglD-junqnXdDik",
                 "name": "Lesson Regularization",
                 "topics": "and Cross Validation A",
                 "allowRecycle": true,
@@ -165,13 +231,61 @@
             },
             {
                 "id": "2WGys9Yi-r1t0-zhIWrJIPvU",
+                "metaId": "alx3zsjr-sfcT-SSClp573rX",
                 "name": "Lesson Regularization",
                 "topics": "and Cross Validation B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "regularization_and_cross_validation": 0.85
                 }
+            }
+        ],
+        "metaLessons": [
+            {
+                "id": "meta_modeling_root",
+                "type": "meta_lesson",
+                "name": "Modeling and Regression (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "O2y3oPAY-nfz4-mfhiBhsRlW",
+                    "Vht4kymC-eMKh-Ywhi6fIFmT"
+                ]
+            },
+            {
+                "id": "meta_feature_engineering_root",
+                "type": "meta_lesson",
+                "name": "Feature Engineering and Dimensionality (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "oAin1yRv-FLGZ-QACq9n6YPp",
+                    "hY7KrAmj-DPml-ehW4r1BJkc"
+                ]
+            },
+            {
+                "id": "meta_loss_root",
+                "type": "meta_lesson",
+                "name": "Loss Functions and Gradient Descent (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "HfOl6QOB-l0Ff-dLVP1svF9U",
+                    "WpTqa1sA-yclO-U5pCJTqEoG"
+                ]
+            },
+            {
+                "id": "meta_regularization_root",
+                "type": "meta_lesson",
+                "name": "Regularization and Cross Validation (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "DC5KHqhy-dglD-junqnXdDik",
+                    "alx3zsjr-sfcT-SSClp573rX"
+                ]
             }
         ]
     },
@@ -183,6 +297,7 @@
         "lessons": [
             {
                 "id": "1Ao6uhJU-IRdf-P4zW93EKJx",
+                "metaId": "7FXHbB4h-AKrk-Wdx8NV4aMJ",
                 "name": "Lesson PCA",
                 "topics": "A",
                 "allowRecycle": true,
@@ -193,16 +308,19 @@
             },
             {
                 "id": "1Ao6uhJU-IRdf-P4zW93EKJx",
+                "metaId": "rzlNthwz-QyRt-iUtHeK4sJB",
                 "name": "Lesson PCA",
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "pca": 0.85
                 }
             },
             {
                 "id": "13C273QV-BcgI-C1fPx1TrFn",
+                "metaId": "2CyMNs45-7r2t-UmDfmyuVlS",
                 "name": "Lesson Bias",
                 "topics": "and Variance A",
                 "allowRecycle": true,
@@ -214,10 +332,12 @@
             },
             {
                 "id": "13C273QV-BcgI-C1fPx1TrFn",
+                "metaId": "5sJ8ZHfI-9KIc-5CXtmtzHGO",
                 "name": "Lesson Bias",
                 "topics": "and Variance B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "bias_and_variance": 0.85,
                     "https://ds100.org/su26/past_exams/": 0.85
@@ -225,6 +345,7 @@
             },
             {
                 "id": "3utzCRWK-lLoP-hUPMUQCPXP",
+                "metaId": "YR12XrOI-xRpQ-7CCbEs0BwP",
                 "name": "Lesson Clustering",
                 "topics": "and Big Data A",
                 "allowRecycle": true,
@@ -235,16 +356,19 @@
             },
             {
                 "id": "3utzCRWK-lLoP-hUPMUQCPXP",
+                "metaId": "fNy83RfZ-1qQg-zuJaYBsKXp",
                 "name": "Lesson Clustering",
                 "topics": "and Big Data B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "clustering_and_big_data": 0.85
                 }
             },
             {
                 "id": "12br4D60-LD86-5FdJ1CoLfC",
+                "metaId": "gtoq5EYF-DPzs-PADDNHGYEE",
                 "name": "Lesson Logistic",
                 "topics": "Regression and Classification A",
                 "allowRecycle": true,
@@ -255,16 +379,19 @@
             },
             {
                 "id": "12br4D60-LD86-5FdJ1CoLfC",
+                "metaId": "6u0C4O0R-GeAg-j5rwS8aDun",
                 "name": "Lesson Logistic",
                 "topics": "Regression and Classification B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "logistic_regression_and_classification": 0.85
                 }
             },
             {
                 "id": "1MrItcsx-pXEF-1iIvO33bSW",
+                "metaId": "Dg0JeTL2-LXNw-N8PY1FXR9d",
                 "name": "Lesson Inference",
                 "topics": "A",
                 "allowRecycle": true,
@@ -275,13 +402,72 @@
             },
             {
                 "id": "1MrItcsx-pXEF-1iIvO33bSW",
+                "metaId": "PgHOlxzS-lGpx-RCmYXLWQAr",
                 "name": "Lesson Inference",
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
+                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "inference": 0.85
                 }
+            }
+        ],
+        "metaLessons": [
+            {
+                "id": "meta_pca_root",
+                "type": "meta_lesson",
+                "name": "PCA (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "7FXHbB4h-AKrk-Wdx8NV4aMJ",
+                    "rzlNthwz-QyRt-iUtHeK4sJB"
+                ]
+            },
+            {
+                "id": "meta_bias_variance_root",
+                "type": "meta_lesson",
+                "name": "Bias and Variance (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "2CyMNs45-7r2t-UmDfmyuVlS",
+                    "5sJ8ZHfI-9KIc-5CXtmtzHGO"
+                ]
+            },
+            {
+                "id": "meta_clustering_root",
+                "type": "meta_lesson",
+                "name": "Clustering and Big Data (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "YR12XrOI-xRpQ-7CCbEs0BwP",
+                    "fNy83RfZ-1qQg-zuJaYBsKXp"
+                ]
+            },
+            {
+                "id": "meta_logistic_root",
+                "type": "meta_lesson",
+                "name": "Logistic Regression and Classification (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "gtoq5EYF-DPzs-PADDNHGYEE",
+                    "6u0C4O0R-GeAg-j5rwS8aDun"
+                ]
+            },
+            {
+                "id": "meta_inference_root",
+                "type": "meta_lesson",
+                "name": "Inference (A/B)",
+                "order": "random",
+                "choose": "1",
+                "lessons": [
+                    "Dg0JeTL2-LXNw-N8PY1FXR9d",
+                    "PgHOlxzS-lGpx-RCmYXLWQAr"
+                ]
             }
         ]
     },
