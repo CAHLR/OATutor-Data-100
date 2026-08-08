@@ -761,7 +761,18 @@ class Platform extends React.Component {
   }
 
   renderMetaLessonSidebar() {
-    const metaName = this.metaLesson?.name || "Meta lesson";
+    const baseMetaName = (this.metaLesson?.name || "Meta lesson").replace(/\s*\(a\/b\)\s*$/i, "");
+    const metaLessonIndex = this.currentMetaLessonIndex;
+    const metaLessonIds = this.metaLessonLessons;
+    const resolvedChild =
+      metaLessonIndex >= 0 && metaLessonIndex < metaLessonIds.length
+        ? findLessonById(metaLessonIds[metaLessonIndex])
+        : undefined;
+    const topics = resolvedChild?.topics != null ? String(resolvedChild.topics).trim() : "";
+    const variantMatch = topics.match(/(?:^|\s)([AaBb])$/);
+    const metaName = variantMatch
+      ? `${baseMetaName} (${variantMatch[1].toUpperCase()})`
+      : baseMetaName;
     const totalCount = this.metaLessonLessons.length;
     const currentIndex = this.currentMetaLessonIndex;
     // Match the width of the problem column below (Problem.js renders the problem in
