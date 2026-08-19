@@ -14,7 +14,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "pandas": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc01"]
             },
             {
                 "id": "33ubFGPj-iH8T-IbGf1Lxm3Q",
@@ -23,10 +26,12 @@
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
                 "learningObjectives": {
                     "pandas": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc01"]
             },
             {
                 "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
@@ -37,7 +42,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "eda": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc02"]
             },
             {
                 "id": "6WJ29VeP-YVx7-6n2rUSmtkh",
@@ -46,10 +54,12 @@
                 "topics": "Data Cleaning & Visualization B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "eda": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc02"]
             },
             {
                 "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
@@ -60,7 +70,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "regex": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc03"]
             },
             {
                 "id": "2Vy5ATKa-YTBV-nZQX7jmAB9",
@@ -71,7 +84,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "regex": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc03"]
             },
             {
                 "id": "5g42kVSj-cv4g-80TtPUaauz",
@@ -82,7 +98,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "sampling": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc04"]
             },
             {
                 "id": "5g42kVSj-cv4g-80TtPUaauz",
@@ -91,10 +110,12 @@
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "sampling": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc04"]
             }
         ],
         "metaLessons": [
@@ -141,7 +162,10 @@
                     "TOinr6yb-kTFf-lHQOPQq2hT"
                 ]
             }
-        ]
+        ],
+        "chat_display_mode": "Window",
+        "chat_prompt": "PROMPT-data-100.txt",
+        "help_penalty_mode": "AnswerReveal"
     },
     {
         "courseName": "Midterm 2 Worksheets",
@@ -158,7 +182,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "modeling_and_regression": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc05"]
             },
             {
                 "id": "2rUWBGFx-B2tl-D3NhTKAmOg",
@@ -167,10 +194,12 @@
                 "topics": "and Regression B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "modeling_and_regression": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc05"]
             },
             {
                 "id": "6hbieM5I-ub2M-32VuhgrRG2",
@@ -181,7 +210,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "feature_engineering_and_dimensionality": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc06"]
             },
             {
                 "id": "6hbieM5I-ub2M-32VuhgrRG2",
@@ -190,10 +222,12 @@
                 "topics": "Engineering and Dimensionality B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "feature_engineering_and_dimensionality": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc06"]
             },
             {
                 "id": "2Pb13WOW-4ZM3-q5InzFY4FQ",
@@ -204,7 +238,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "loss_functions_and_gradient_descent": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc07"]
             },
             {
                 "id": "2Pb13WOW-4ZM3-q5InzFY4FQ",
@@ -213,10 +250,12 @@
                 "topics": "Functions and Gradient Descent B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "loss_functions_and_gradient_descent": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc07"]
             },
             {
                 "id": "2WGys9Yi-r1t0-zhIWrJIPvU",
@@ -227,7 +266,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "regularization_and_cross_validation": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc08"]
             },
             {
                 "id": "2WGys9Yi-r1t0-zhIWrJIPvU",
@@ -236,10 +278,12 @@
                 "topics": "and Cross Validation B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "regularization_and_cross_validation": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc08"]
             }
         ],
         "metaLessons": [
@@ -287,7 +331,10 @@
                     "alx3zsjr-sfcT-SSClp573rX"
                 ]
             }
-        ]
+        ],
+        "chat_display_mode": "Window",
+        "chat_prompt": "PROMPT-data-100.txt",
+        "help_penalty_mode": "AnswerReveal"
     },
     {
         "courseName": "Midterm 3 Worksheets",
@@ -304,7 +351,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "pca": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc09"]
             },
             {
                 "id": "1Ao6uhJU-IRdf-P4zW93EKJx",
@@ -313,10 +363,12 @@
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "pca": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc09"]
             },
             {
                 "id": "13C273QV-BcgI-C1fPx1TrFn",
@@ -328,7 +380,10 @@
                 "learningObjectives": {
                     "bias_and_variance": 0.85,
                     "https://ds100.org/su26/past_exams/": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc10"]
             },
             {
                 "id": "13C273QV-BcgI-C1fPx1TrFn",
@@ -337,11 +392,13 @@
                 "topics": "and Variance B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "bias_and_variance": 0.85,
                     "https://ds100.org/su26/past_exams/": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc10"]
             },
             {
                 "id": "3utzCRWK-lLoP-hUPMUQCPXP",
@@ -352,7 +409,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "clustering_and_big_data": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc11"]
             },
             {
                 "id": "3utzCRWK-lLoP-hUPMUQCPXP",
@@ -361,10 +421,12 @@
                 "topics": "and Big Data B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "clustering_and_big_data": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc11"]
             },
             {
                 "id": "12br4D60-LD86-5FdJ1CoLfC",
@@ -375,7 +437,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "logistic_regression_and_classification": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc12"]
             },
             {
                 "id": "12br4D60-LD86-5FdJ1CoLfC",
@@ -384,10 +449,12 @@
                 "topics": "Regression and Classification B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "logistic_regression_and_classification": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc12"]
             },
             {
                 "id": "1MrItcsx-pXEF-1iIvO33bSW",
@@ -398,7 +465,10 @@
                 "chat_display_mode": "Window",
                 "learningObjectives": {
                     "inference": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc13"]
             },
             {
                 "id": "1MrItcsx-pXEF-1iIvO33bSW",
@@ -407,10 +477,12 @@
                 "topics": "B",
                 "allowRecycle": true,
                 "chat_display_mode": "Window",
-                "chat_prompt": "PROMPTvtest.txt",
+                "chat_prompt": "PROMPT-data-100.txt",
                 "learningObjectives": {
                     "inference": 0.85
-                }
+                },
+                "help_penalty_mode": "AnswerReveal",
+                "chat_documents": ["data100-disc13"]
             }
         ],
         "metaLessons": [
@@ -469,7 +541,10 @@
                     "PgHOlxzS-lGpx-RCmYXLWQAr"
                 ]
             }
-        ]
+        ],
+        "chat_display_mode": "Window",
+        "chat_prompt": "PROMPT-data-100.txt",
+        "help_penalty_mode": "AnswerReveal"
     },
     {
         "courseName": "Forms",
@@ -489,10 +564,12 @@
                 "showStuMastery": false,
                 "giveStuBottomHint": false,
                 "giveHintOnIncorrect": false,
-                "chat_display_mode": "Off",
+                "chat_display_mode": "Window",
                 "learningObjectives": {
                     "survey": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal"
             },
             {
                 "id": "7XcHND01-8pgZ-LnOGzNOxgI",
@@ -506,11 +583,16 @@
                 "showStuMastery": false,
                 "giveStuBottomHint": false,
                 "giveHintOnIncorrect": false,
-                "chat_display_mode": "Off",
+                "chat_display_mode": "Window",
                 "learningObjectives": {
                     "consent": 0.85
-                }
+                },
+                "chat_prompt": "PROMPT-data-100.txt",
+                "help_penalty_mode": "AnswerReveal"
             }
-        ]
+        ],
+        "chat_display_mode": "Window",
+        "chat_prompt": "PROMPT-data-100.txt",
+        "help_penalty_mode": "AnswerReveal"
     }
 ]
